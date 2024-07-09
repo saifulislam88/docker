@@ -1,17 +1,16 @@
 ### Technological Transformation
 
-#### **Bare Metal**
+ - #### **Bare Metal**
 
- - Performance: Direct access to hardware, no virtualization overhead.
- - Control: Full control over the hardware and software stack.
- - Use Case: High-performance computing, gaming servers, financial trading systems.
+  - Performance: Direct access to hardware, no virtualization overhead.
+  - Control: Full control over the hardware and software stack.
+  - Use Case: High-performance computing, gaming servers, financial trading systems.
 
-#### **Key Reasons for Transition:**
+ - #### **Key Reasons for Transition:**
 
- - **Bare Metal to Virtualization:** To improve resource utilization, flexibility, and isolation while maintaining control over the hardware.
- - **Virtualization to Cloud:** To leverage scalability, cost efficiency, reduced maintenance, and global accessibility, enabling faster innovation and business agility.
-
-**Example:** Instead of having ten servers each running at 10% capacity, virtualization can consolidate them into one or two servers running at 80-90% capacity.
+  - **Bare Metal to Virtualization:** To improve resource utilization, flexibility, and isolation while maintaining control over the hardware.
+  - **Virtualization to Cloud:** To leverage scalability, cost efficiency, reduced maintenance, and global accessibility, enabling faster innovation and business agility.
+  - **Example:** Instead of having ten servers each running at 10% capacity, virtualization can consolidate them into one or two servers running at 80-90% capacity.
 
 
 <p align="right">
