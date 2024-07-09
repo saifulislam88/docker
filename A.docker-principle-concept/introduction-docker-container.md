@@ -21,9 +21,6 @@
 
 ### Virtualization
 
-<p align="right">
-<img src="https://github.com/saifulislam88/docker/assets/68442870/3c392818-aa43-4313-8893-72d83f1a5019" alt="Technological Transformation" width="800"/>
-</p>
 
 **Virtualization is software technology that separates physical infrastructures to create multiple virtual machine (VM) or virtual environments on a single server.**
 
@@ -61,6 +58,9 @@ Let's revisit the different ways of deploying applications we talked about—loc
 - #### LXC
 
 
+<p align="right">
+<img src="https://github.com/saifulislam88/docker/assets/68442870/3c392818-aa43-4313-8893-72d83f1a5019" alt="Technological Transformation" width="800"/>
+</p>
 
 ### Cloud Computing
 
