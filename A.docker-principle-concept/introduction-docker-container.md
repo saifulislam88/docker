@@ -35,6 +35,13 @@ This software technology of virtualization system is known as a virtual machine 
 - Flexibility: Easier to create, manage, and scale VMs.
 - Use Case: Server consolidation, development and testing environments.
 
+
+<p align="right">
+<img src="https://github.com/saifulislam88/docker/assets/68442870/3c392818-aa43-4313-8893-72d83f1a5019" alt="Technological Transformation" width="800"/>
+</p>
+
+
+
 #### KVM Virtualization
 
 #### OS Virtualization
@@ -57,10 +64,6 @@ Let's revisit the different ways of deploying applications we talked about—loc
 
 - #### LXC
 
-
-<p align="right">
-<img src="https://github.com/saifulislam88/docker/assets/68442870/3c392818-aa43-4313-8893-72d83f1a5019" alt="Technological Transformation" width="800"/>
-</p>
 
 ### Cloud Computing
 
