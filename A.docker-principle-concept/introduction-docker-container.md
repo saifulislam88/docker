@@ -31,10 +31,10 @@ This software technology of virtualization system is known as a virtual machine 
 
 
 
-- Resource Utilization: Better utilization of physical hardware by running multiple VMs.
-- Isolation: Strong isolation between applications.
-- Flexibility: Easier to create, manage, and scale VMs.
-- Use Case: Server consolidation, development and testing environments.
+- **Resource Utilization:** Better utilization of physical hardware by running multiple VMs.
+- **Isolation:** Strong isolation between applications.
+- **Flexibility:** Easier to create, manage, and scale VMs.
+- **Use Case:** Server consolidation, development and testing environments.
 
 
 <p align="right">
@@ -43,16 +43,18 @@ This software technology of virtualization system is known as a virtual machine 
 
 
 There are **two** main types of virtualization technology — 
- - **KVM Virtualization**
- - **OS Virtualization**
+
+  - **KVM Virtualization**
+  - **OS Virtualization**
 
  
+
 #### KVM Virtualization
 
 **KVM (Kernel-Based Virtual Machine) Is An Open-Source Virtualization Technology That Allows You To Run Multiple Virtual Machines (VMs) On A Linux/Windows Host**. A Kernel-based Virtual Machine (KVM) allows you to turn Linux or Windows Server into a hypervisor, allowing your operating system to produce multiple virtual machines and isolated virtual environments.
 
-- Type 1 - hypervisor is running on bare-metal hardware. Such hypervisors are VMWare ESXi, Linux KVM, Hyper-V
-- Type 2 - hypervisor is running inside Host OS. Such hypervisors are VMWare Workstation are Oracle VirtualBox
+- **Type 1 - hypervisor** is running on **bare-metal hardware**. Such hypervisors are VMWare ESXi, Linux KVM, Hyper-V
+- **Type 2 - hypervisor** is running inside **Host OS**. Such hypervisors are VMWare Workstation are Oracle VirtualBox
 
 
 ##### KVM features
@@ -86,12 +88,11 @@ Let's revisit the different ways of deploying applications we talked about—loc
 
 ### Cloud Computing
 
-
-- Scalability: On-demand resource allocation, easy to scale up or down.
-- Cost Efficiency: Pay-as-you-go model, no need for upfront hardware investment.
-- Maintenance: Reduced operational overhead as the cloud provider manages the infrastructure.
-- Accessibility: Access from anywhere, ideal for remote work and distributed teams.
-- Use Case: Web applications, SaaS, startups, dynamic workloads.
+- **Scalability:** On-demand resource allocation, easy to scale up or down.
+- **Cost Efficiency:** Pay-as-you-go model, no need for upfront hardware investment.
+- **Maintenance:** Reduced operational overhead as the cloud provider manages the infrastructure.
+- **Accessibility:** Access from anywhere, ideal for remote work and distributed teams.
+- **Use Case:** Web applications, SaaS, startups, dynamic workloads.
 
 
 ###
