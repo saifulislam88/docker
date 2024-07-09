@@ -6,6 +6,8 @@
 ### Virtualization
 ### Container
 
-<td><img src="https://github.com/saifulislam88/docker/assets/68442870/3c392818-aa43-4313-8893-72d83f1a5019" alt="Technological Transformation" width="800"/></td>
+<p align="right">
+<img src="https://github.com/saifulislam88/docker/assets/68442870/3c392818-aa43-4313-8893-72d83f1a5019" alt="Technological Transformation" width="800"/>
+</p>
 
 ### Cloud Computing
