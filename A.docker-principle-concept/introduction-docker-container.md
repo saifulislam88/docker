@@ -1,5 +1,9 @@
 ### Technological Transformation
 
+<p align="right">
+<img src="https://github.com/saifulislam88/docker/assets/68442870/401f1965-77cb-450a-b558-5ad80b1428ea" alt="Technological Transformation" width="800"/>
+</p>
+
  - #### **Bare Metal**
    - Performance: Direct access to hardware, no virtualization overhead.
    - Control: Full control over the hardware and software stack.
@@ -11,9 +15,7 @@
    - **Example:** Instead of having ten servers each running at 10% capacity, virtualization can consolidate them into one or two servers running at 80-90% capacity.
 
 
-<p align="right">
-<img src="https://github.com/saifulislam88/docker/assets/68442870/401f1965-77cb-450a-b558-5ad80b1428ea" alt="Technological Transformation" width="800"/>
-</p>
+
 
 
 ### Virtualization
