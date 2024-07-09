@@ -1,10 +1,9 @@
 ### Technological Transformation
 
  - #### **Bare Metal**
-
-  - Performance: Direct access to hardware, no virtualization overhead.
-  - Control: Full control over the hardware and software stack.
-  - Use Case: High-performance computing, gaming servers, financial trading systems.
+   - Performance: Direct access to hardware, no virtualization overhead.
+   - Control: Full control over the hardware and software stack.
+   - Use Case: High-performance computing, gaming servers, financial trading systems.
 
  - #### **Key Reasons for Transition:**
 
