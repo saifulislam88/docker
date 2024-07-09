@@ -44,13 +44,13 @@ This software technology of virtualization system is known as a virtual machine 
 
 There are **two** main types of virtualization technology — 
 
-  - **KVM Virtualization**
-  - **OS Virtualization**
+   - **KVM Virtualization**
+   - **OS Virtualization**
 
  
 
 
-#### KVM Virtualization
+- #### KVM Virtualization
 
 **KVM (Kernel-Based Virtual Machine) Is An Open-Source Virtualization Technology That Allows You To Run Multiple Virtual Machines (VMs) On A Linux/Windows Host**. A Kernel-based Virtual Machine (KVM) allows you to turn Linux or Windows Server into a hypervisor, allowing your operating system to produce multiple virtual machines and isolated virtual environments.
 
