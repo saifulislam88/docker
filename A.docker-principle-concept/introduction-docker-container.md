@@ -43,7 +43,15 @@ This software technology of virtualization system is known as a virtual machine 
 
 Let's revisit the different ways of deploying applications we talked about—locally, On-prem, and in the cloud. Imagine a friend, like another developer, wants to work with your code. They'd need to get their own "copy" of it. They'd go to a platform like GitHub and download your project files. Then, they'd install any extra tools needed to run your code smoothly. But sometimes, their computer might have different settings that make it hard for your code to work right. That's where containers come in handy. They wrap up your code with all the settings and tools it needs to run, no matter where it's put. 
 
-**Containers are like pre-packaged sets of tools and code. You just plug them in, and they start working without any fuss.** |OR| **Containers are predefined configurations and dependencies, along with the code files that make it possible for the code to run seamlessly.**
+#### **Defination**
+**Containers are like pre-packaged sets of tools and code. You just plug them in, and they start working without any fuss.**
+**Containers are predefined configurations and dependencies, along with the code files that make it possible for the code to run seamlessly.**
+**একটা কার্নেলের ওপর আলাদা isolated ইউসার স্পেইসগুলোকে (User Space) কন্টেইনার (Container)বলা হয়.**
+**Container is Runnable instance of the image, basically it is an isolated process.**
+**Container is package of software that includes all dependencies: code, runtime, configuration, and system libraries so that it can run on any host system.**
+
+
+
 
 
 ### Cloud Computing
