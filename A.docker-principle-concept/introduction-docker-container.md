@@ -163,12 +163,20 @@ So Docker is an open-source lightweight containerization technology. It allows y
 - [Pull the Image: Download the image from Docker Hub on another machine.]()
 - [Run a Container: Create and run a container from the Docker image.]()
 - [Manage Containers: Use Docker commands to manage the lifecycle of containers.]()
-- [Deploy Updates: Rebuild, retag, push updates, and restart the container to deploy updates()
+- [Deploy Updates: Rebuild, retag, push updates, and restart the container to deploy updates]()
 
 ##### Install Docker: Set up Docker on your machine & Run your first container
   
   - Installation Steps on Ubuntu
-
+```sh
+sudo apt update
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt update
+sudo apt install docker-ce
+sudo systemctl status docker
+```
 
 ##### Create a Dockerfile: Define your application's environment and dependencies
 ##### Build an Image: Use the Dockerfile to build a Docker image]
