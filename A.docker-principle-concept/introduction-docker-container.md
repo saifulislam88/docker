@@ -140,6 +140,9 @@ So Docker is an open-source lightweight containerization technology. It allows y
 Collaboration’ with Docker
 ![image](https://github.com/saifulislam88/docker/assets/68442870/0851f2cb-62a7-44ac-b50c-4995e6044952)
 
+<img src="https://github.com/saifulislam88/docker/assets/68442870/0851f2cb-62a7-44ac-b50c-4995e6044952" alt="Technological Transformation" width="1200"/>
+
+
 Also, the Agile Development without Docker culture results in many issues as shown in the below picture.
 ![image](https://github.com/saifulislam88/docker/assets/68442870/3dbc68a7-aca6-414d-af31-f828cd22ddfd)
 
