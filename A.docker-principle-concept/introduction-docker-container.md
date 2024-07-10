@@ -132,8 +132,13 @@ So Docker is an open-source lightweight containerization technology. It allows y
 - Docker enables more efficient use of system resources.
 - Simplifies the application development and deployment process.
 
+Collaboration’ with Docker
 ![image](https://github.com/saifulislam88/docker/assets/68442870/0851f2cb-62a7-44ac-b50c-4995e6044952)
+
+Also, the Agile Development without Docker culture results in many issues as shown in the below picture.
 ![image](https://github.com/saifulislam88/docker/assets/68442870/3dbc68a7-aca6-414d-af31-f828cd22ddfd)
+
+To overcome all these situations the need for containerization with Docker arises.
 ![image](https://github.com/saifulislam88/docker/assets/68442870/d41b0acb-99c5-4b6b-aa21-ea7df2edaa30)
 
 
