@@ -87,11 +87,9 @@ Let's revisit the different ways of deploying applications we talked about—loc
       - **একটা কার্নেলের ওপর আলাদা isolated ইউসার স্পেইসগুলোকে (User Space) কন্টেইনার (Container)বলা হয়.**
       - **Container is Runnable instance of the image, basically it is an isolated process.**
       - **Container is package of software that includes all dependencies: code, runtime, configuration, and system libraries so that it can run on any host system.**
+![image](https://github.com/saifulislam88/docker/assets/68442870/d3fb591d-3c6b-43ed-aa93-464187b108d2)
 
    - Single operating system kernel.
-
-
-##### **2.LXC**
 
 
 ### Cloud Computing
@@ -102,12 +100,18 @@ Let's revisit the different ways of deploying applications we talked about—loc
 - **Accessibility:** Access from anywhere, ideal for remote work and distributed teams.
 - **Use Case:** Web applications, SaaS, startups, dynamic workloads.
 
+##### **2.LXC**
+
+
+
+
 
 ### Docker
 
 Docker is a **daemon-based** software platform that uses **OS-level virtualization** to **build, deploy, and manage applications within containers**. Containers are built from images, which in turn are constructed from Dockerfiles, providing an abstraction layer for application deployment.
 
 So Docker is an open-source lightweight containerization technology. It allows you to automate the deployment of applications in lightweight and portable containers
+![image](https://github.com/saifulislam88/docker/assets/68442870/4810e275-4208-49b9-aaf2-631146eb6cbb)
 
 #### **Docker Features**
 - **Building**
@@ -128,6 +132,7 @@ So Docker is an open-source lightweight containerization technology. It allows y
 - Cross-platform Consistency (Windows/Linux).
 - DevOps and Continuous Delivery.
 - Enables faster software delivery cycles.
+- Docker enables efficiency and reduces operational overheads so that any developer, in any development environment
 - To help automate the deployment of applications inside containers.
 - Docker enables more efficient use of system resources.
 - Simplifies the application development and deployment process.
@@ -142,3 +147,30 @@ To overcome all these situations the need for containerization with Docker arise
 ![image](https://github.com/saifulislam88/docker/assets/68442870/d41b0acb-99c5-4b6b-aa21-ea7df2edaa30)
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+![image](https://github.com/saifulislam88/docker/assets/68442870/0e56ca7a-8b0e-455b-8b8e-ae92660e00e4)
