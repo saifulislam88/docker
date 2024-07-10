@@ -107,7 +107,7 @@ Docker is a **daemon-based** software platform that uses **OS-level virtualizati
 
 So Docker is an open-source lightweight containerization technology. It allows you to automate the deployment of applications in lightweight and portable containers
 
-<img src="https://github.com/saifulislam88/docker/assets/68442870/4810e275-4208-49b9-aaf2-631146eb6cbb" alt="Technological Transformation" width="600"/>
+<img src="https://github.com/saifulislam88/docker/assets/68442870/5b11673c-469a-4b64-8030-a1fd626c088e" alt="Technological Transformation" width="600"/>
 
 #### **Docker Features**
 - **Building**
@@ -141,8 +141,8 @@ So Docker is an open-source lightweight containerization technology. It allows y
 
 
 Docker Architecture and Components
+<img src="https://github.com/saifulislam88/docker/assets/68442870/4810e275-4208-49b9-aaf2-631146eb6cbb" alt="Technological Transformation" width="600"/>
 
-![image](https://github.com/saifulislam88/docker/assets/68442870/5b11673c-469a-4b64-8030-a1fd626c088e)
 
 
 
