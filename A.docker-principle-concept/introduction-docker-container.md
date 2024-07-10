@@ -97,6 +97,7 @@ Let's revisit the different ways of deploying applications we talked about—loc
 - Containerd
 - CRI-O
 - LXC
+
 https://www.linkedin.com/posts/mmumshad_kodekloud-devops-kubernetes-activity-7153377989160751105-viax/?utm_source=share&utm_medium=member_desktop
 
 ### 🚀**Docker**
@@ -107,7 +108,7 @@ So Docker is an open-source lightweight containerization technology. It allows y
 
 <img src="https://github.com/saifulislam88/docker/assets/68442870/5b11673c-469a-4b64-8030-a1fd626c088e" alt="Technological Transformation" width="600"/>
 
-#### **Docker Features**
+#### 🚀**Docker Features**
 - **Building**
 - **Shipping**
 - **Run and managing Application**
@@ -118,7 +119,7 @@ So Docker is an open-source lightweight containerization technology. It allows y
 - **Increase Productivity**
 - **Application Isolation**
 
-#### **Why Use Docker Container**
+#### 🚀**Why Use Docker Container**
 - Shifting from Monolithic to Microservices Architecture.
 - Sometimes Software Does Not Work in Another System.
 - Cross-platform Consistency (Windows/Linux).
@@ -137,37 +138,47 @@ So Docker is an open-source lightweight containerization technology. It allows y
 - **To overcome all these situations the need for containerization with Docker arises.**
 <img src="https://github.com/saifulislam88/docker/assets/68442870/d41b0acb-99c5-4b6b-aa21-ea7df2edaa30" alt="Technological Transformation" width="600"/>
 
-#### Docker Architecture and Components
+#### 🚀Docker Architecture and Components
 
 <img src="https://github.com/saifulislam88/docker/assets/68442870/4810e275-4208-49b9-aaf2-631146eb6cbb" alt="Technological Transformation" width="600"/>
 
-There are five major components in the Docker architecture:
+**There are five major components in the Docker architecture:**
 
- Docker Daemon
- Docker Clients
- Docker Host
- Docker Registry
- Docker Images
- Docker containers
-
-
-#### Container Application Deployment lifecycle on Docker
-
-- Install Docker: Set up Docker on your machine.
-- Create a Dockerfile: Define your application's environment and dependencies.
+ - Docker Daemon
+ - Docker Clients
+ - Docker Host
+ - Docker Registry
+ - Docker Images
+ - Docker containers
 
 
+#### 🚀Container Application Deployment lifecycle on Docker
+
+- [Install Docker: Set up Docker on your machine & Run your first container]()
+- [Create a Dockerfile: Define your application's environment and dependencies.]()
+- [Build an Image: Use the Dockerfile to build a Docker image]()
+- [Tag the Image: Tag the image for repository identification.]()
+- [Log In to Docker Hub: Authenticate to Docker Hub.]()
+- [Push the Image: Upload the tagged image to Docker Hub.]()
+- [Pull the Image: Download the image from Docker Hub on another machine.]()
+- [Run a Container: Create and run a container from the Docker image.]()
+- [Manage Containers: Use Docker commands to manage the lifecycle of containers.]()
+- [Deploy Updates: Rebuild, retag, push updates, and restart the container to deploy updates()
+
+##### Install Docker: Set up Docker on your machine & Run your first container
   
-- Build an Image: Use the Dockerfile to build a Docker image.
-- Tag the Image: Tag the image for repository identification.
-- Log In to Docker Hub: Authenticate to Docker Hub.
-- Push the Image: Upload the tagged image to Docker Hub.
-- Pull the Image: Download the image from Docker Hub on another machine.
-- Run a Container: Create and run a container from the Docker image.
-- Manage Containers: Use Docker commands to manage the lifecycle of containers.
-- Deploy Updates: Rebuild, retag, push updates, and restart the container to deploy updates.
+  - Installation Steps on Ubuntu
 
 
+##### Create a Dockerfile: Define your application's environment and dependencies
+##### Build an Image: Use the Dockerfile to build a Docker image]
+##### Tag the Image: Tag the image for repository identification
+##### Log In to Docker Hub: Authenticate to Docker Hub
+##### Push the Image: Upload the tagged image to Docker Hub
+##### Pull the Image: Download the image from Docker Hub on another machine
+##### Run a Container: Create and run a container from the Docker image
+##### Manage Containers: Use Docker commands to manage the lifecycle of containers
+##### Deploy Updates: Rebuild, retag, push updates, and restart the container to deploy updates
 
 
 
