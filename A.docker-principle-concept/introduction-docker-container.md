@@ -18,8 +18,6 @@
 
 
 
-
-
 ### Virtualization
 
 
@@ -99,7 +97,7 @@ Let's revisit the different ways of deploying applications we talked about—loc
 - Containerd
 - CRI-O
 - LXC
-
+https://www.linkedin.com/posts/mmumshad_kodekloud-devops-kubernetes-activity-7153377989160751105-viax/?utm_source=share&utm_medium=member_desktop
 
 ### Docker
 
@@ -143,17 +141,31 @@ So Docker is an open-source lightweight containerization technology. It allows y
 
 <img src="https://github.com/saifulislam88/docker/assets/68442870/4810e275-4208-49b9-aaf2-631146eb6cbb" alt="Technological Transformation" width="600"/>
 
+There are five major components in the Docker architecture:
+
+ Docker Daemon
+ Docker Clients
+ Docker Host
+ Docker Registry
+ Docker Images
+ Docker containers
 
 
+#### Container Application Deployment lifecycle on Docker
+
+- Install Docker: Set up Docker on your machine.
+- Create a Dockerfile: Define your application's environment and dependencies.
 
 
-
-
-
-
-
-
-
+  
+- Build an Image: Use the Dockerfile to build a Docker image.
+- Tag the Image: Tag the image for repository identification.
+- Log In to Docker Hub: Authenticate to Docker Hub.
+- Push the Image: Upload the tagged image to Docker Hub.
+- Pull the Image: Download the image from Docker Hub on another machine.
+- Run a Container: Create and run a container from the Docker image.
+- Manage Containers: Use Docker commands to manage the lifecycle of containers.
+- Deploy Updates: Rebuild, retag, push updates, and restart the container to deploy updates.
 
 
 
