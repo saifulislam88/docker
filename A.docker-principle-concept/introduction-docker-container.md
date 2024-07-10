@@ -81,30 +81,24 @@ There are **two** main types of virtualization technology —
 ##### **1.Container**
 Let's revisit the different ways of deploying applications we talked about—locally, On-prem, and in the cloud. Imagine a friend, like another developer, wants to work with your code. They'd need to get their own "copy" of it. They'd go to a platform like GitHub and download your project files. Then, they'd install any extra tools needed to run your code smoothly. But sometimes, their computer might have different settings that make it hard for your code to work right. That's where containers come in handy. They wrap up your code with all the settings and tools it needs to run, no matter where it's put.
 
-   - ###### **Defination**
+   - ###### **More Defination**
       - **Containers are like pre-packaged sets of tools and code. You just plug them in, and they start working without any fuss.**
       - **Containers are predefined configurations and dependencies, along with the code files that make it possible for the code to run seamlessly.**
       - **একটা কার্নেলের ওপর আলাদা isolated ইউসার স্পেইসগুলোকে (User Space) কন্টেইনার (Container)বলা হয়.**
       - **Container is Runnable instance of the image, basically it is an isolated process.**
       - **Container is package of software that includes all dependencies: code, runtime, configuration, and system libraries so that it can run on any host system.**
+
 <p align="right">
   <img src="https://github.com/saifulislam88/docker/assets/68442870/d3fb591d-3c6b-43ed-aa93-464187b108d2" alt="Technological Transformation" width="600"/>
 </p>
-   - Single operating system kernel.
 
+###### Different Container or Container runtimes provider
 
-### Cloud Computing
-
-- **Scalability:** On-demand resource allocation, easy to scale up or down.
-- **Cost Efficiency:** Pay-as-you-go model, no need for upfront hardware investment.
-- **Maintenance:** Reduced operational overhead as the cloud provider manages the infrastructure.
-- **Accessibility:** Access from anywhere, ideal for remote work and distributed teams.
-- **Use Case:** Web applications, SaaS, startups, dynamic workloads.
-
-##### **2.LXC**
-
-
-
+- Docker
+- Podman
+- Containerd
+- CRI-O
+- LXC
 
 
 ### Docker
@@ -126,8 +120,6 @@ So Docker is an open-source lightweight containerization technology. It allows y
 - **Increase Productivity**
 - **Application Isolation**
 
-![image](https://github.com/saifulislam88/docker/assets/68442870/5b11673c-469a-4b64-8030-a1fd626c088e)
-
 #### **Why Use Docker Container**
 - Shifting from Monolithic to Microservices Architecture.
 - Sometimes Software Does Not Work in Another System.
@@ -138,22 +130,19 @@ So Docker is an open-source lightweight containerization technology. It allows y
 - To help automate the deployment of applications inside containers.
 - Docker enables more efficient use of system resources.
 - Simplifies the application development and deployment process.
-
-Collaboration’ with Docker
-
+- **Collaboration’ with Docker**
 <img src="https://github.com/saifulislam88/docker/assets/68442870/0851f2cb-62a7-44ac-b50c-4995e6044952" alt="Technological Transformation" width="600"/>
 
-
-Also, the Agile Development without Docker culture results in many issues as shown in the below picture.
+- **Also, the Agile Development without Docker culture results in many issues as shown in the below picture.**
 ![image](https://github.com/saifulislam88/docker/assets/68442870/3dbc68a7-aca6-414d-af31-f828cd22ddfd)
 
-To overcome all these situations the need for containerization with Docker arises.
+- **To overcome all these situations the need for containerization with Docker arises.**
 ![image](https://github.com/saifulislam88/docker/assets/68442870/d41b0acb-99c5-4b6b-aa21-ea7df2edaa30)
 
 
+Docker Architecture and Components
 
-
-
+![image](https://github.com/saifulislam88/docker/assets/68442870/5b11673c-469a-4b64-8030-a1fd626c088e)
 
 
 
