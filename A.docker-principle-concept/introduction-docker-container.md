@@ -111,7 +111,8 @@ Let's revisit the different ways of deploying applications we talked about—loc
 Docker is a **daemon-based** software platform that uses **OS-level virtualization** to **build, deploy, and manage applications within containers**. Containers are built from images, which in turn are constructed from Dockerfiles, providing an abstraction layer for application deployment.
 
 So Docker is an open-source lightweight containerization technology. It allows you to automate the deployment of applications in lightweight and portable containers
-![image](https://github.com/saifulislam88/docker/assets/68442870/4810e275-4208-49b9-aaf2-631146eb6cbb)
+
+<img src="https://github.com/saifulislam88/docker/assets/68442870/4810e275-4208-49b9-aaf2-631146eb6cbb" alt="Technological Transformation" width="600"/>
 
 #### **Docker Features**
 - **Building**
