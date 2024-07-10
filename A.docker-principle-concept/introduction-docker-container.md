@@ -87,7 +87,8 @@ Let's revisit the different ways of deploying applications we talked about—loc
       - **একটা কার্নেলের ওপর আলাদা isolated ইউসার স্পেইসগুলোকে (User Space) কন্টেইনার (Container)বলা হয়.**
       - **Container is Runnable instance of the image, basically it is an isolated process.**
       - **Container is package of software that includes all dependencies: code, runtime, configuration, and system libraries so that it can run on any host system.**
-![image](https://github.com/saifulislam88/docker/assets/68442870/d3fb591d-3c6b-43ed-aa93-464187b108d2)
+
+<img src="https://github.com/saifulislam88/docker/assets/68442870/d3fb591d-3c6b-43ed-aa93-464187b108d2" alt="Technological Transformation" width="600"/>
 
    - Single operating system kernel.
 
