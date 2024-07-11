@@ -150,7 +150,7 @@ So Docker is an open-source lightweight containerization technology. It allows y
 
 ##### 📌**Install Docker: Set up Docker on your machine & Run your first container**
   
-  - ######✅Installation Steps on Ubuntu
+  ###### - ✅Installation Steps on Ubuntu
 
 ```sh
 sudo apt update
@@ -162,7 +162,7 @@ sudo apt install docker-ce
 sudo systemctl status docker
 ```
 
-  - ######✅Run your first container using Docker Registry(Public Repo: https://hub.docker.com/)
+  ###### - ✅Run your first container using Docker Registry(Public Repo: https://hub.docker.com/)
 
 ```sh
 docker run -it -d -p 8080:80 --name web nginx:latest
@@ -170,7 +170,7 @@ docker run -it -d -p 80:80 --name web-nginx nginx
 docker ps -a
 ```
 
-  - ######✅Explain basic Docker usage workflow
+   ###### - ✅Explain basic Docker usage workflow
 
     - **🎯1.**	Everything starts with the Dockerfile. The Dockerfile is the source code of the Image.
 
@@ -184,7 +184,7 @@ docker ps -a
 
 A Dockerfile is a text document that contains all the commands or instructions to bulid an image automatically by reading.
 
-- ######✅Writing a Dockerfile for a simple application | Set up a nodejs project
+###### - ✅Writing a Dockerfile for a simple application | Set up a nodejs project
 
 ```sh
 sudo apt update
@@ -197,7 +197,7 @@ npm init -y
 npm install express
 ```
 
-- ######✅Create a file named app.js in your project directory and add the following code:
+###### - ✅Create a file named app.js in your project directory and add the following code:
 
 ```sh
 const express = require('express');
@@ -214,11 +214,11 @@ app.listen(port, () => {
 
 ```
 
-- ######✅Run and Test Your Application: You should see the message `Example app listening at http://localhost:3000`
+###### - ✅Run and Test Your Application: You should see the message `Example app listening at http://localhost:3000`
 
 `node app.js`
 
-- ######✅Write a Dockerfile on Nodejs project
+###### - ✅Write a Dockerfile on Nodejs project
 
 ```sh
 # Use an official Node.js runtime as a parent image
