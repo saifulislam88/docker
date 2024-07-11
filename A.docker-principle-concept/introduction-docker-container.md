@@ -167,7 +167,7 @@ So Docker is an open-source lightweight containerization technology. It allows y
 
 ##### Install Docker: Set up Docker on your machine & Run your first container
   
-  - **Installation Steps on Ubuntu**
+  - **1.Installation Steps on Ubuntu**
 
 ```sh
 sudo apt update
@@ -198,7 +198,7 @@ docker ps -a
     - **4.**	Next, you can use the image to run containers. A running container is very similar, in many aspects, to a virtual machine (but without the hypervisor).
 
 
-##### Create a Dockerfile: Define your application's environment and dependencies
+##### 2.Create a Dockerfile: Define your application's environment and dependencies
 
 **A Dockerfile is a text document that contains all the commands or instructions to bulid an image automatically by reading.**
 
@@ -264,18 +264,23 @@ CMD ["node", "app.js"]
 ##### Build an Image: Use the Dockerfile to build a Docker image & Run from local
 
 `docker build -t my-node-app .`
+
 `docker run -it -d -p 3000:3000 my-node-app`
 
 ##### Tag | Login | Push the Docker Image
 
-`docker tag my-node-app saifulislam88/my-node-app:latest`  
+`docker tag my-node-app saifulislam88/my-node-app:latest`
+  
 `docker login`
+
 `docker push saifulislam88/my-node-app:latest`
 
 ##### Pull and Run :  Download the image from Docker Hub on another machine | Create and run a container from the Docker image
 
 `docker pull saifulislam88/my-node-app:latest`
+
 `docker run -it -d -p 3001:3000 saifulislam88/my-node-app:latest`
+
 `docker ps -a`
 
 
