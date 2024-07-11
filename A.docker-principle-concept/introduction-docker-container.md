@@ -9,14 +9,10 @@
 <img src="https://github.com/saifulislam88/docker/assets/68442870/401f1965-77cb-450a-b558-5ad80b1428ea" alt="Technological Transformation" width="800"/>
 </p>
 
-
-
  - #### 🔥**Key Reasons for Transition:**
    - **Bare Metal to Virtualization:** To improve resource utilization, flexibility, and isolation while maintaining control over the hardware.
    - **Virtualization to Cloud:** To leverage scalability, cost efficiency, reduced maintenance, and global accessibility, enabling faster innovation and business agility.
    - **Example:** Instead of having ten servers each running at 10% capacity, virtualization can consolidate them into one or two servers running at 80-90% capacity.
-
-
 
 ### 🚀Virtualization
 
@@ -35,14 +31,10 @@ This software technology of virtualization system is known as a virtual machine 
 <img src="https://github.com/saifulislam88/docker/assets/68442870/3c392818-aa43-4313-8893-72d83f1a5019" alt="Technological Transformation" width="800"/>
 </p>
 
-
 There are **two** main types of virtualization technology — 
 
    - **KVM Virtualization**
    - **OS Virtualization**
-
- 
-
 
  #### 🔥KVM Virtualization
 
@@ -50,7 +42,6 @@ There are **two** main types of virtualization technology —
 
  - **Type 1 - hypervisor** is running on **bare-metal hardware**. Such hypervisors are VMWare ESXi, Linux KVM, Hyper-V
  - **Type 2 - hypervisor** is running inside **Host OS**. Such hypervisors are VMWare Workstation are Oracle VirtualBox
-
 
 ##### 📌KVM features
  - Security
@@ -62,7 +53,6 @@ There are **two** main types of virtualization technology —
  - Scheduling and resource control
  - Lower latency and higher prioritization
 
-
 #### 🔥OS Virtualization
 
 **একটি কার্নেলের ওপর একাধিক isolated ইউসার স্পেইসের অস্তিত্বকে অপারেটিং সিস্টেম লেভেল ভার্চুয়ালাইজেসন বলে.**
@@ -70,7 +60,6 @@ There are **two** main types of virtualization technology —
 
 **User Space vs Kernel Space**
 অপারেটিং সিস্টেমে কিছু প্রসেস আছে যাদের সিস্টেম রিসোর্সগুলো (System Resource) সরাসরি অ্যাক্সেস করার প্রিভিলেজ (Privilege) থেকে থাকে। এই প্রসেসগুলো সাধারণত কার্নেল (Kernel) এবং ডিভাইস ড্রাইভার (Device Drivers) হয়ে থাকে। এসমস্ত প্রিভিলেজসম্পন্ন প্রসেসসমুহের মেমোরি প্রটেকশনের জন্যে ভার্চুয়াল মেমোরি স্পেইসের একাংশকে dedicate করে দেয়া হয় । এর কারনে ভার্চুয়াল মেমোরি দ্বিখণ্ডিত হয় । একটি খণ্ডে চলে কার্নেল আর ডিভাইস ড্রাইভারদের মত প্রিভিলেজ সম্পন্ন প্রসেসসমুহ আর এই খণ্ডটা কার্নেল স্পেইস (Kernel Space) নামে পরিচিত। আরেকটি খণ্ডে চলে বাকি সব সাধারণ প্রসেস যেমন ব্রাউসার, টেক্সট এডিটর, গেমস, ইত্যাদি আর এই খণ্ডটা ইউসার স্পেইস (User Space) নামে পরিচিত।
-
 
 ##### 📌**1.Container**
 Let's revisit the different ways of deploying applications we talked about—locally, On-prem, and in the cloud. Imagine a friend, like another developer, wants to work with your code. They'd need to get their own "copy" of it. They'd go to a platform like GitHub and download your project files. Then, they'd install any extra tools needed to run your code smoothly. But sometimes, their computer might have different settings that make it hard for your code to work right. That's where containers come in handy. They wrap up your code with all the settings and tools it needs to run, no matter where it's put.
@@ -147,7 +136,6 @@ So Docker is an open-source lightweight containerization technology. It allows y
  - Docker Images
  - Docker containers
 
-
 #### 🔥Container Application Deployment lifecycle on Docker
 
 - [Install Docker: Set up Docker on your machine & Run your first container]()
@@ -161,9 +149,9 @@ So Docker is an open-source lightweight containerization technology. It allows y
 - [Manage Containers: Use Docker commands to manage the lifecycle of containers.]()
 - [Deploy Updates: Rebuild, retag, push updates, and restart the container to deploy updates]()
 
-##### 📌Install Docker: Set up Docker on your machine & Run your first container
+##### 📌**Install Docker: Set up Docker on your machine & Run your first container**
   
-  - **✅Installation Steps on Ubuntu**
+  - ✅Installation Steps on Ubuntu
 
 ```sh
 sudo apt update
@@ -175,7 +163,7 @@ sudo apt install docker-ce
 sudo systemctl status docker
 ```
 
-  - **✅Run your first container using Docker Registry(Public Repo: https://hub.docker.com/)**
+  - ✅Run your first container using Docker Registry(Public Repo: https://hub.docker.com/)
 
 ```sh
 docker run -it -d -p 8080:80 --name web nginx:latest
@@ -183,7 +171,7 @@ docker run -it -d -p 80:80 --name web-nginx nginx
 docker ps -a
 ```
 
-  - **✅Explain basic Docker usage workflow**
+  - ✅Explain basic Docker usage workflow
 
     - **🎯1.**	Everything starts with the Dockerfile. The Dockerfile is the source code of the Image.
 
@@ -193,12 +181,11 @@ docker ps -a
 
     - **🎯4.**	Next, you can use the image to run containers. A running container is very similar, in many aspects, to a virtual machine (but without the hypervisor).
 
+##### 📌**Create a Dockerfile: Define your application's environment and dependencies**
 
-##### 📌Create a Dockerfile: Define your application's environment and dependencies
+A Dockerfile is a text document that contains all the commands or instructions to bulid an image automatically by reading.
 
-**A Dockerfile is a text document that contains all the commands or instructions to bulid an image automatically by reading.**
-
-- **✅Writing a Dockerfile for a simple application** | **Set up a nodejs project**
+- ✅Writing a Dockerfile for a simple application | Set up a nodejs project
 
 ```sh
 sudo apt update
@@ -211,7 +198,7 @@ npm init -y
 npm install express
 ```
 
-- **✅Create a file named app.js in your project directory and add the following code:**
+- ✅Create a file named app.js in your project directory and add the following code:
 
 ```sh
 const express = require('express');
@@ -228,11 +215,11 @@ app.listen(port, () => {
 
 ```
 
-- **✅Run and Test Your Application: You should see the message `Example app listening at http://localhost:3000`**
+- ✅Run and Test Your Application: You should see the message `Example app listening at http://localhost:3000`
 
 `node app.js`
 
-- **✅Write a Dockerfile on Nodejs project**
+- ✅Write a Dockerfile on Nodejs project
 
 ```sh
 # Use an official Node.js runtime as a parent image
@@ -278,7 +265,6 @@ CMD ["node", "app.js"]
 `docker run -it -d -p 3001:3000 saifulislam88/my-node-app:latest`
 
 `docker ps -a`
-
 
 ##### 📌Manage Containers: Use Docker commands to manage the lifecycle of containers
 ##### 📌Deploy Updates: Rebuild, retag, push updates, and restart the container to deploy updates
