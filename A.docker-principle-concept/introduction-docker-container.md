@@ -167,7 +167,8 @@ So Docker is an open-source lightweight containerization technology. It allows y
 
 ##### Install Docker: Set up Docker on your machine & Run your first container
   
-  - Installation Steps on Ubuntu
+  - **Installation Steps on Ubuntu**
+
 ```sh
 sudo apt update
 sudo apt install apt-transport-https ca-certificates curl software-properties-common
@@ -177,36 +178,31 @@ sudo apt update
 sudo apt install docker-ce
 sudo systemctl status docker
 ```
-  - Run your first container using Docker Registry(Public Repo: https://hub.docker.com/)
+
+  - **Run your first container using Docker Registry(Public Repo: https://hub.docker.com/)**
+
 ```sh
 docker run -it -d -p 8080:80 --name web nginx:latest
 docker run -it -d -p 80:80 --name web-nginx nginx
 docker ps -a
 ```
-  - Explain basic Docker usage workflow
 
-**1.**	Everything starts with the Dockerfile. The Dockerfile is the source code of the Image.
+  - **Explain basic Docker usage workflow**
 
-**2.**	Once the Dockerfile is created, you build it to create the image of the container. The image is just the "compiled version" of the "source code" which is the Dockerfile.
+    - **1.**	Everything starts with the Dockerfile. The Dockerfile is the source code of the Image.
 
-**3.**	Once you have the image of the container, you should redistribute it using the registry. The registry is like a git repository -- you can push and pull images.
+    - **2.**	Once the Dockerfile is created, you build it to create the image of the container. The image is just the "compiled version" of the "source code" which is the Dockerfile.
 
-**4.**	Next, you can use the image to run containers. A running container is very similar, in many aspects, to a virtual machine (but without the hypervisor).
+    - **3.**	Once you have the image of the container, you should redistribute it using the registry. The registry is like a git repository -- you can push and pull images.
 
-
-
+    - **4.**	Next, you can use the image to run containers. A running container is very similar, in many aspects, to a virtual machine (but without the hypervisor).
 
 
 ##### Create a Dockerfile: Define your application's environment and dependencies
 
-A Dockerfile is a text document that contains all the commands or instructions to bulid an image automatically by reading.
+**A Dockerfile is a text document that contains all the commands or instructions to bulid an image automatically by reading.**
 
-Dockerfile basics
-Best practices for writing Dockerfiles
-Writing a Dockerfile for a simple application
-
-
-- Set up a nodejs project
+- **Writing a Dockerfile for a simple application** | **Set up a nodejs project**
 
 ```sh
 sudo apt update
@@ -219,7 +215,7 @@ npm init -y
 npm install express
 ```
 
-- Create a file named app.js in your project directory and add the following code:
+- **Create a file named app.js in your project directory and add the following code:**
 
 ```sh
 const express = require('express');
@@ -235,11 +231,12 @@ app.listen(port, () => {
 });
 
 ```
- - Run and Test Your Application: You should see the message `Example app listening at http://localhost:3000`
+
+- **Run and Test Your Application: You should see the message `Example app listening at http://localhost:3000`**
 
 `node app.js`
 
-- Write a Dockerfile on Nodejs project
+- **Write a Dockerfile on Nodejs project**
 
 ```sh
 # Use an official Node.js runtime as a parent image
@@ -263,37 +260,32 @@ EXPOSE 3000
 CMD ["node", "app.js"]
 
 ```
-- Build the Docker Image & Run from local
+
+##### Build an Image: Use the Dockerfile to build a Docker image & Run from local
 
 `docker build -t my-node-app .`
 `docker run -it -d -p 3000:3000 my-node-app`
 
-- Tag the Docker Image
+##### Tag | Login | Push the Docker Image
 
-`docker tag my-node-app saifulislam88/my-node-app:latest`
-
-- Push the Docker Image to a Repository
-  
+`docker tag my-node-app saifulislam88/my-node-app:latest`  
 `docker login`
 `docker push saifulislam88/my-node-app:latest`
 
-- Pull and Run Container from Docker Hub specific accounts
+##### Pull and Run :  Download the image from Docker Hub on another machine | Create and run a container from the Docker image
 
 `docker pull saifulislam88/my-node-app:latest`
 `docker run -it -d -p 3001:3000 saifulislam88/my-node-app:latest`
 `docker ps -a`
 
+
+
+
+##### Manage Containers: Use Docker commands to manage the lifecycle of containers
+##### Deploy Updates: Rebuild, retag, push updates, and restart the container to deploy updates
 What are the Common instructions in Dockerfile?
 
 
-##### Build an Image: Use the Dockerfile to build a Docker image]
-##### Tag the Image: Tag the image for repository identification
-##### Log In to Docker Hub: Authenticate to Docker Hub
-##### Push the Image: Upload the tagged image to Docker Hub
-##### Pull the Image: Download the image from Docker Hub on another machine
-##### Run a Container: Create and run a container from the Docker image
-##### Manage Containers: Use Docker commands to manage the lifecycle of containers
-##### Deploy Updates: Rebuild, retag, push updates, and restart the container to deploy updates
 
 
 
