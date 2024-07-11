@@ -1,10 +1,12 @@
 #**Docker Container Administrator | An Introduction & Principle Concept**
 
-**DOCX by**
-<img src="https://github.com/saifulislam88/docker/assets/68442870/09012688-7671-4f50-8208-dedad3b66353" alt="Technological Transformation" width="200"/>
+**DocX by**
 
-- **Copyright © 2024 Md. Saiful Islam(mSI). All Rights Reserved**
-- Reference : Internet & ChatBot
+<img src="https://github.com/saifulislam88/docker/assets/68442870/09012688-7671-4f50-8208-dedad3b66353" alt="Technological Transformation" width="400"/>
+
+- **Copyright** © 2024 Md. Saiful Islam(mSI). All Rights Reserved
+- **Reference:** Internet & ChatBot
+
 
 **Table of contents**
 - [Technological Transformation](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#technological-transformation)
