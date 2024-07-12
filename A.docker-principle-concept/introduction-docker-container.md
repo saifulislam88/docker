@@ -33,6 +33,7 @@
             - [Build an Image: Use the Dockerfile to build a Docker image & Run from local.](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#build-an-image-use-the-dockerfile-to-build-a-docker-image--run-from-local)
             - [Tag | Login | Push the Docker Image.](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#tag--login--push-the-docker-image)
             - [Pull and Run : Download the image from Docker Hub | Create and run a container from the Docker image.](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#pull-and-run---download-the-image-from-docker-hub-on-another-machine--create-and-run-a-container-from-the-docker-image)
+            - [The instructions/Command list in Dockerfile]()
             - [Manage Containers: Use Docker commands to manage the lifecycle of containers.](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#manage-containers-use-docker-commands-to-manage-the-lifecycle-of-containers)
             - [Deploy Updates: Rebuild, retag, push updates, and restart the container to deploy updates.](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#deploy-updates-rebuild-retag-push-updates-and-restart-the-container-to-deploy-updates)
 
@@ -317,11 +318,31 @@ CMD ["node", "app.js"]
 
 `docker ps -a`
 
+
+##### 📌 The instructions/Command list in Dockerfile
+
+ - ● FROM - Instruction creates the base image layer from base a image.In every valid Dockerfile, FROM is the first instruction.
+     ● Example:
+```sh
+FROM node:14
+FROM python:3.8-slim
+FROM ubuntu:20.04
+```
+
+● WORKDIR
+● USER
+● MAINTAINER : Metadata of the owner who owns the image
+● ADD
+● COPY
+● EXPOSE: Specifies the port on which the container is exposed
+● LABEL
+● RUN
+● CMD
+● ENTRYPOINT
+● VOLUME
+
 ##### 📌Manage Containers: Use Docker commands to manage the lifecycle of containers
 ##### 📌Deploy Updates: Rebuild, retag, push updates, and restart the container to deploy updates
-What are the Common instructions in Dockerfile?
-
-
 
 
 
