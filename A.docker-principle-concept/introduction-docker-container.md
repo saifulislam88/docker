@@ -361,13 +361,32 @@ WORKDIR /usr/src/app
 
 ```
 
+###### ✅**USER**
+Sets the user name (or UID) and optionally the user group (or GID) to use when running the image and for any `RUN`, `CMD`, and `ENTRYPOINT` instructions that follow it in the Dockerfile.
 
-● USER
-● MAINTAINER : Metadata of the owner who owns the image
+```sh
+USER appuser
+```
+###### ✅**MAINTAINER**
+The MAINTAINER instruction was used in older versions of Docker to specify the person responsible for the Dockerfile or image.Metadata of the owner who owns the image
+
+```sh
+MAINTAINER Saiful Islam <saiful.islam@example.com>
+```
+###### ✅**LABEL**
+
+The `LABEL` instruction is used to add metadata to an image. It is more versatile and can be used to specify the maintainer along with other metadata like version, description, and more.
+
+```sh
+LABEL maintainer="Saiful Islam <saiful.islam@example.com>"
+LABEL version="1.0"
+LABEL description="A simple nodejs application"
+```
+
 ● ADD
 ● COPY
 ● EXPOSE: Specifies the port on which the container is exposed
-● LABEL
+
 ● RUN
 ● CMD
 ● ENTRYPOINT
