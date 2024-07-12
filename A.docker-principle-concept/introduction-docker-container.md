@@ -323,7 +323,7 @@ CMD ["node", "app.js"]
 
  - **FROM** - **Instruction creates the base image layer from base a image**.In every valid Dockerfile, FROM is the first instruction.
 
-&nbsp;&nbsp;**Example:**
+  &nbsp;&nbsp; **Example:**
 
 ```sh
 FROM node:14
