@@ -334,7 +334,8 @@ CMD ["node", "app.js"]
 - ENTRYPOINT
 - VOLUME
 
- ###### ✅**FROM** - **Instruction creates the base image layer from base a image**.In every valid Dockerfile, FROM is the first instruction.
+ ###### ✅**FROM**
+ Instruction creates the base image layer from base a image**.In every valid Dockerfile, FROM is the first instruction.
 
   &nbsp;&nbsp; **Example:**
 
@@ -344,7 +345,8 @@ FROM python:3.8-slim
 FROM ubuntu:20.04
 ```
 
- ###### ✅**WORKDIR** - Sets the working directory for any `RUN`, `CMD`, `ENTRYPOINT`, `COPY`, and `ADD` instructions that follow it in the Dockerfile.If you set `WORKDIR` multiple times, each `WORKDIR` instruction will override the previous one.
+###### ✅**WORKDIR**
+Sets the working directory for any `RUN`, `CMD`, `ENTRYPOINT`, `COPY`, and `ADD` instructions that follow it in the Dockerfile.If you set `WORKDIR` multiple times, each `WORKDIR` instruction will override the previous one.
 
    &nbsp;&nbsp; **Example:**
 ```sh
