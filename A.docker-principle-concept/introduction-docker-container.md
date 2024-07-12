@@ -340,6 +340,7 @@ CMD ["node", "app.js"]
   &nbsp;&nbsp; **Example:**
 
 ```sh
+FROM alpine:latest
 FROM node:14
 FROM python:3.8-slim
 FROM ubuntu:20.04
@@ -403,9 +404,18 @@ COPY . /app
 
    - ✅**ADD**
 
+**The `ADD` instruction is similar to COPY but with some additional features**. `ADD` is useful for specific cases where you need **to extract archives or download files from URLs**. If the source is a local tar archive (`e.g., a .tar, .tar.gz, .tar.bz2, etc.`), it will be automatically unpacked at the destination. Can add files from remote URLs. If the source is a URL, ADD downloads the file from the URL and adds it to the destination path.
 
-    
+```sh
+# Set the working directory to /app
+`WORKDIR /app`
+`ADD . /app`
+`ADD app.tar.gz /app`
 
+# Download a file from a URL and add it to the /app directory
+`ADD https://example.com/somefile.tar.gz /app/`
+`ADD https://example.com/somefile.txt /app/`
+```
 
 ###### ✅**EXPOSE**
 Specifies the port on which the container is exposed
