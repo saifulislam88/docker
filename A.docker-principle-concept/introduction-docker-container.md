@@ -322,8 +322,8 @@ CMD ["node", "app.js"]
 ##### 📌 The instructions/Command list in Dockerfile
 
  - **FROM** - **Instruction creates the base image layer from base a image**.In every valid Dockerfile, FROM is the first instruction.
-
-<br><br>**Example:**
+<br>
+&nbsp;&nbsp;**Example:**
 ```sh
 FROM node:14
 FROM python:3.8-slim
