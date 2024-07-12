@@ -400,6 +400,7 @@ COPY . .
 
 # OR We can copy local source code to /app using COPY
 COPY . /app
+COPY requirements.txt ./
 ```
 
    - ✅**ADD**
@@ -408,21 +409,27 @@ COPY . /app
 
 ```sh
 # Set the working directory to /app
-`WORKDIR /app`
-`ADD . /app`
-`ADD app.tar.gz /app`
+WORKDIR /app
+ADD . /app
+ADD app.tar.gz /app
 
 # Download a file from a URL and add it to the /app directory
-`ADD https://example.com/somefile.tar.gz /app/`
-`ADD https://example.com/somefile.txt /app/`
+ADD https://example.com/somefile.tar.gz /app/
+ADD https://example.com/somefile.txt /app/
 ```
+
+###### ✅**RUN | CMD | ENTRYPOINT**
+
+In a Dockerfile, RUN, CMD, and ENTRYPOINT are instructions used to define commands that should be run in the container. They have distinct purposes and behaviors. Additionally, each of these instructions can be specified in either shell form or **`exec`** form. Here's a detailed explanation:
+
+
+  - ✅**RUN**
+  - ✅**CMD**
+  - ✅**ENTRYPOINT**
+
 
 ###### ✅**EXPOSE**
 Specifies the port on which the container is exposed
-
-###### ✅**RUN**
-###### ✅**CMD**
-###### ✅**ENTRYPOINT**
 ###### ✅**VOLUME**
 
 ##### 📌Manage Containers: Use Docker commands to manage the lifecycle of containers
