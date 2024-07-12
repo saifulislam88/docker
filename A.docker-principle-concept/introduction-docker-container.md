@@ -383,14 +383,37 @@ LABEL version="1.0"
 LABEL description="A simple nodejs application"
 ```
 
-● ADD
-● COPY
-● EXPOSE: Specifies the port on which the container is exposed
+###### ✅**COPY and ADD **
+In Dockerfiles, both the `COPY` and `ADD` instructions are used to copy files and directories from the host machine into the Docker image. However, there are some key differences between the two:
 
-● RUN
-● CMD
-● ENTRYPOINT
-● VOLUME
+
+  - ✅**COPY**
+Only copies files and directories. It doesn't have additional capabilities like extracting archives.`COPY` is preferred for copying files and directories because it is simple and predictable.
+
+```sh
+# Set the working directory to /app
+WORKDIR /app
+
+# Copy local source code to /app using COPY
+COPY . .
+
+# OR We can copy local source code to /app using COPY
+COPY . /app
+```
+
+   - ✅**ADD**
+
+
+    
+
+
+###### ✅**EXPOSE**
+Specifies the port on which the container is exposed
+
+###### ✅**RUN**
+###### ✅**CMD**
+###### ✅**ENTRYPOINT**
+###### ✅**VOLUME**
 
 ##### 📌Manage Containers: Use Docker commands to manage the lifecycle of containers
 ##### 📌Deploy Updates: Rebuild, retag, push updates, and restart the container to deploy updates
