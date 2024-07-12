@@ -331,7 +331,22 @@ FROM python:3.8-slim
 FROM ubuntu:20.04
 ```
 
-● WORKDIR
+ -  **WORKDIR** - Sets the working directory for any `RUN`, `CMD`, `ENTRYPOINT`, `COPY`, and `ADD` instructions that follow it in the Dockerfile.If you set `WORKDIR` multiple times, each `WORKDIR` instruction will override the previous one.
+
+   &nbsp;&nbsp; **Example:**
+```sh
+# Set the working directory to /app
+WORKDIR /usr/src/app
+
+# Change working directory to /usr/src/app
+WORKDIR /app
+
+# Change working directory back to /app
+WORKDIR /usr/src/app
+
+```
+
+
 ● USER
 ● MAINTAINER : Metadata of the owner who owns the image
 ● ADD
