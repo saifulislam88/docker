@@ -420,7 +420,7 @@ ADD https://example.com/somefile.txt /app/
 
 ###### ✅**RUN | CMD | ENTRYPOINT**
 
-In a Dockerfile, RUN, CMD, and ENTRYPOINT are instructions used to define commands that should be run in the container. They have distinct purposes and behaviors. Additionally, each of these instructions can be specified in either shell form or **`exec`** form. Here's a detailed explanation:
+In a Dockerfile, RUN, CMD, and ENTRYPOINT are instructions used to define commands that should be run in the container. They have distinct purposes and behaviors. Additionally, each of these instructions can be specified in either **`shell` form** or **`exec` form**. Here's a detailed explanation:
 
 
   - ✅**RUN**
