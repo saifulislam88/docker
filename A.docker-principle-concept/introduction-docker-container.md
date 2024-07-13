@@ -444,7 +444,7 @@ ENTRYPOINT ["python", "app.py"]
 ```
 
 
-  - 🎯**RUN**
+🎯- **RUN**
 
 **RUN** command is mainly used to install a new software packages and applications on top of an existing image layer `[FROM ubuntu: latest]` in Dockerfile. When you use the `RUN` command, it will execute the instruction and will create a new layer.
 
@@ -463,7 +463,7 @@ RUN ["apt-get", "install", "vim"]
 ```
 
 
-  - 🎯**CMD**
+🎯- **CMD**
 
 **CMD** in Dockerfile Instruction is used to execute a command in running container, **there should be one CMD in a Dockerfile.**
 CMD executes the **final** commands when you launch a new container from image and also we use CMD command to provide default values of an executing container. **In a Dockerfile, if we include multiple CMD commands, then only the last instruction is used.**
@@ -491,7 +491,7 @@ This **CMD** sets the default command to run **python app.py** when the containe
 
 
 
-  - 🎯**ENTRYPOINT**
+🎯- **ENTRYPOINT**
 
 The ENTRYPOINT instruction defines the command that will always be run, while CMD provides the default arguments for that command. However, if you specify both CMD and ENTRYPOINT with the same command, it can lead to unintended behavior.
 
@@ -517,16 +517,12 @@ CMD ["app.py"]
 ```
 **Explanation:**
 
-The **ENTRYPOINT** specifies **python** as the executable. The CMD provides **app.py** as the default argument. When running the container, the default command will be **python app.py**.
+The **ENTRYPOINT** specifies **python** as the executable. The CMD provides **app.py** as the default argument. When running the container, the default command will be **python app.py**.If both `CMD` and `ENTRYPOINT` specify the same command, it can lead to repeated commands and unintended behavior. For example:
 
-
-**Unintended Behavior**
-
-If both CMD and ENTRYPOINT specify the same command, it can lead to repeated commands and unintended behavior. For example:
-
+```sh
 ENTRYPOINT ["python", "app.py"]
 CMD ["python", "app.py"]
-
+```
 
 Combining CMD and ENTRYPOINT
 
