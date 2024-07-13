@@ -33,7 +33,17 @@
             - [Build an Image: Use the Dockerfile to build a Docker image & Run from local.](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#build-an-image-use-the-dockerfile-to-build-a-docker-image--run-from-local)
             - [Tag | Login | Push the Docker Image.](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#tag--login--push-the-docker-image)
             - [Pull and Run : Download the image from Docker Hub | Create and run a container from the Docker image.](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#pull-and-run---download-the-image-from-docker-hub-on-another-machine--create-and-run-a-container-from-the-docker-image)
-            - [The instructions/Command list in Dockerfile]()
+            - [The instructions/Command list in Dockerfile](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#-the-instructionscommand-list-in-dockerfile)
+              - [FROM](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#-from)
+              - [WORKDIR](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#workdir)
+              - [USER](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#user)
+              - [MAINTAINER](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#maintainer)
+              - [LABEL](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#label)
+              - [COPY and ADD](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#copy-and-add)
+              - [RUN | CMD | ENTRYPOINT](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#run--cmd--entrypoint)
+              - [EXPOSE](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#expose)
+              - [VOLUME](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#volume)
+               
             - [Manage Containers: Use Docker commands to manage the lifecycle of containers.](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#manage-containers-use-docker-commands-to-manage-the-lifecycle-of-containers)
             - [Deploy Updates: Rebuild, retag, push updates, and restart the container to deploy updates.](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#deploy-updates-rebuild-retag-push-updates-and-restart-the-container-to-deploy-updates)
 
@@ -326,10 +336,10 @@ CMD ["node", "app.js"]
 - [USER](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#user)
 - [MAINTAINER](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#maintainer)
 - [LABEL](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#label)
-- [COPY and ADD]()
-- RUN | CMD | ENTRYPOINT
-- [EXPOSE]()
-- [VOLUME]()
+- [COPY and ADD](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#copy-and-add)
+- [RUN | CMD | ENTRYPOINT](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#run--cmd--entrypoint)
+- [EXPOSE](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#expose)
+- [VOLUME](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#volume)
 
  ###### ✅ **FROM**
  **Instruction creates the base image layer from base a image**.In every valid Dockerfile, FROM is the first instruction.
