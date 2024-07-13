@@ -517,7 +517,7 @@ CMD ["app.py"]
 ```
 **Explanation:**
 
-The **ENTRYPOINT** specifies **python** as the executable. The CMD provides **app.py** as the default argument. When running the container, the default command will be **python app.py**.If both `CMD` and `ENTRYPOINT` specify the same command, it can lead to repeated commands and unintended behavior. For example:
+The **ENTRYPOINT** specifies **python** as the executable. The CMD provides **app.py** as the default argument. When running the container, the default command will be **python app.py**. If both `CMD` and `ENTRYPOINT` specify the same command, it can lead to repeated commands and unintended behavior. For example:
 
 ```sh
 ENTRYPOINT ["python", "app.py"]
