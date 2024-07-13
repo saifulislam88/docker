@@ -388,7 +388,7 @@ LABEL description="A simple nodejs application"
 In Dockerfiles, both the `COPY` and `ADD` instructions are used to copy files and directories from the host machine into the Docker image. However, there are some key differences between the two:
 
 
-  - ✅**COPY**
+  - 🎯**COPY**
 Only copies files and directories. It doesn't have additional capabilities like extracting archives.`COPY` is preferred for copying files and directories because it is simple and predictable.
 
 ```sh
@@ -403,7 +403,7 @@ COPY . /app
 COPY requirements.txt ./
 ```
 
-   - ✅**ADD**
+   - 🎯**ADD**
 
 **The `ADD` instruction is similar to COPY but with some additional features**. `ADD` is useful for specific cases where you need **to extract archives or download files from URLs**. If the source is a local tar archive (`e.g., a .tar, .tar.gz, .tar.bz2, etc.`), it will be automatically unpacked at the destination. Can add files from remote URLs. If the source is a URL, ADD downloads the file from the URL and adds it to the destination path.
 
@@ -420,53 +420,54 @@ ADD https://example.com/somefile.txt /app/
 
 ###### ✅**RUN | CMD | ENTRYPOINT**
 
-In a Dockerfile, RUN, CMD, and ENTRYPOINT are instructions used to define commands that should be run in the container. They have distinct purposes and behaviors. Additionally, each of these instructions can be specified in either **`shell` form** or **`exec` form**. That means, there are two ways to specify the command to run:
+In a Dockerfile, RUN, CMD, and ENTRYPOINT are instructions used to define commands that should be run in the container. They have distinct purposes and behaviors. Additionally, each of these instructions can be specified in either **`shell` form** or **`exec` form**. That means, there are two ways to specify the command to run. `RUN` `CMD` `ENTRYPOINT` supports both form.
 
-**`shell` form** 
-The command is run inside a new shell process, which, by default, is /bin/sh -c on Linux and cmd /S /C on Windows.
-
-**Supported Instructions**
-
-`RUN`
-
-`CMD`
-
-`ENTRYPOINT`
+**Shell form** 
+The command is run inside a new shell process, which, by default, is /bin/sh -c on Linux and cmd /S /C on Windows. Each command runs in a shell (/bin/sh -c), which might not exist in some minimal base images.
 
 ```sh
+# Example of writing in Dockerfile
 RUN apt-get update && apt-get install -y python3
 CMD python app.py
 ENTRYPOINT python app.py
 ```
 
-**`exec` form**.
+**Exec form**
 This command is not run inside a new shell process. The exec form uses a JSON array and does not invoke a shell unless explicitly done.
 
-**Supported Instructions**
-
-`RUN`
-
-`CMD`
-
-`ENTRYPOINT`
 
 ```sh
+# Example of writing in Dockerfile
 RUN ["apt-get", "update"]
 CMD ["python", "app.py"]
 ENTRYPOINT ["python", "app.py"]
 ```
 
 
+  - 🎯**RUN**
 
-  - ✅**RUN**
+**RUN** command is mainly used to install a new software packages and applications on top of an existing image layer `[FROM ubuntu: latest]` in Dockerfile. When you use the `RUN` command, it will execute the instruction and will create a new layer.
+
+**Example from Shell form**
+
+```sh
+RUN apt-get -y update
+RUN apt-get install vim && apt-get install -y libpq-dev
+```
+
+**Example from Exec form**
+
+```sh
+RUN ["apt-get", "update"]
+RUN ["apt-get", "install", "vim"]
+```
 
 
 
 
 
-
-  - ✅**CMD**
-  - ✅**ENTRYPOINT**
+  - 🎯**CMD**
+  - 🎯**ENTRYPOINT**
 
 
 ###### ✅**EXPOSE**
