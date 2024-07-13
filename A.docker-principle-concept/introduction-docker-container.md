@@ -420,10 +420,51 @@ ADD https://example.com/somefile.txt /app/
 
 ###### ✅**RUN | CMD | ENTRYPOINT**
 
-In a Dockerfile, RUN, CMD, and ENTRYPOINT are instructions used to define commands that should be run in the container. They have distinct purposes and behaviors. Additionally, each of these instructions can be specified in either **`shell` form** or **`exec` form**. Here's a detailed explanation:
+In a Dockerfile, RUN, CMD, and ENTRYPOINT are instructions used to define commands that should be run in the container. They have distinct purposes and behaviors. Additionally, each of these instructions can be specified in either **`shell` form** or **`exec` form**. That means, there are two ways to specify the command to run:
+
+**`shell` form** 
+The command is run inside a new shell process, which, by default, is /bin/sh -c on Linux and cmd /S /C on Windows.
+
+**Supported Instructions**
+
+`RUN`
+
+`CMD`
+
+`ENTRYPOINT`
+
+```sh
+RUN apt-get update && apt-get install -y python3
+CMD python app.py
+ENTRYPOINT python app.py
+```
+
+**`exec` form**.
+This command is not run inside a new shell process. The exec form uses a JSON array and does not invoke a shell unless explicitly done.
+
+**Supported Instructions**
+
+`RUN`
+
+`CMD`
+
+`ENTRYPOINT`
+
+```sh
+RUN ["apt-get", "update"]
+CMD ["python", "app.py"]
+ENTRYPOINT ["python", "app.py"]
+```
+
 
 
   - ✅**RUN**
+
+
+
+
+
+
   - ✅**CMD**
   - ✅**ENTRYPOINT**
 
