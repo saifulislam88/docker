@@ -448,14 +448,14 @@ ENTRYPOINT ["python", "app.py"]
 
 **RUN** command is mainly used to install a new software packages and applications on top of an existing image layer `[FROM ubuntu: latest]` in Dockerfile. When you use the `RUN` command, it will execute the instruction and will create a new layer.
 
-**Example from Shell form**
+**Example from `Shell` form**
 
 ```sh
 RUN apt-get -y update
 RUN apt-get install vim && apt-get install -y libpq-dev
 ```
 
-**Example from Exec form**
+**Example from `Exec` form**
 
 ```sh
 RUN ["apt-get", "update"]
@@ -463,11 +463,73 @@ RUN ["apt-get", "install", "vim"]
 ```
 
 
-
-
-
   - 🎯**CMD**
+
+**CMD** in Dockerfile Instruction is used to execute a command in running container, **there should be one CMD in a Dockerfile.**
+CMD executes the **final** commands when you launch a new container from image and also we use CMD command to provide default values of an executing container. **In a Dockerfile, if we include multiple CMD commands, then only the last instruction is used.**
+
+```sh
+FROM python:3.8-slim
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the application files
+COPY . /app
+
+# Install dependencies
+RUN pip install -r requirements.txt
+
+# Set the entrypoint
+ENTRYPOINT ["python"]
+
+# Set the default command arguments
+CMD ["app.py"]
+
+```
+This **CMD** sets the default command to run **python app.py** when the container starts. That means python app.py parameters will be **ENTRYPOINT**
+
+
+
   - 🎯**ENTRYPOINT**
+
+The ENTRYPOINT instruction defines the command that will always be run, while CMD provides the default arguments for that command. However, if you specify both CMD and ENTRYPOINT with the same command, it can lead to unintended behavior.
+
+
+```sh
+FROM python:3.8-slim
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the application files
+COPY . /app
+
+# Install dependencies
+RUN pip install -r requirements.txt
+
+# Set the entrypoint to python
+ENTRYPOINT ["python"]
+
+# Set the default command to app.py
+CMD ["app.py"]
+
+```
+**Explanation:**
+
+The **ENTRYPOINT** specifies **python** as the executable. The CMD provides **app.py** as the default argument. When running the container, the default command will be **python app.py**.
+
+
+**Unintended Behavior**
+
+If both CMD and ENTRYPOINT specify the same command, it can lead to repeated commands and unintended behavior. For example:
+
+ENTRYPOINT ["python", "app.py"]
+CMD ["python", "app.py"]
+
+
+Combining CMD and ENTRYPOINT
+
 
 
 ###### ✅**EXPOSE**
