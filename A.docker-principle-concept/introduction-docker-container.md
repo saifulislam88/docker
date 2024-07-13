@@ -323,16 +323,13 @@ CMD ["node", "app.js"]
 
 - [FROM]()
 - [WORKDIR]()
-- USER
-- MAINTAINER
-- ADD
-- COPY
-- EXPOSE
-- LABEL
-- RUN
-- CMD
-- ENTRYPOINT
-- VOLUME
+- [USER]()
+- [MAINTAINER]()
+- [LABEL]()
+- [COPY and ADD]()
+- RUN | CMD | ENTRYPOINT
+- [EXPOSE]()
+- [VOLUME]()
 
  ###### ✅ **FROM**
  **Instruction creates the base image layer from base a image**.In every valid Dockerfile, FROM is the first instruction.
@@ -524,13 +521,18 @@ ENTRYPOINT ["python", "app.py"]
 CMD ["python", "app.py"]
 ```
 
-Combining CMD and ENTRYPOINT
-
-
 
 ###### ✅**EXPOSE**
-Specifies the port on which the container is exposed
+
+Make port 80 available to the world outside this container
+
+`EXPOSE 80`
+
 ###### ✅**VOLUME**
+
+Create a volume at /data
+
+`VOLUME ["/data"]`
 
 ##### 📌Manage Containers: Use Docker commands to manage the lifecycle of containers
 ##### 📌Deploy Updates: Rebuild, retag, push updates, and restart the container to deploy updates
