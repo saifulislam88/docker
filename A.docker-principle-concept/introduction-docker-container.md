@@ -321,11 +321,11 @@ CMD ["node", "app.js"]
 
 ##### 📌 The instructions/Command list in Dockerfile
 
-- [FROM]()
-- [WORKDIR]()
-- [USER]()
-- [MAINTAINER]()
-- [LABEL]()
+- [FROM](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#-from)
+- [WORKDIR](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#workdir)
+- [USER](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#user)
+- [MAINTAINER](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#maintainer)
+- [LABEL](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#label)
 - [COPY and ADD]()
 - RUN | CMD | ENTRYPOINT
 - [EXPOSE]()
@@ -381,7 +381,7 @@ LABEL version="1.0"
 LABEL description="A simple nodejs application"
 ```
 
-###### ✅**COPY and ADD **
+###### ✅**COPY and ADD**
 In Dockerfiles, both the `COPY` and `ADD` instructions are used to copy files and directories from the host machine into the Docker image. However, there are some key differences between the two:
 
 
