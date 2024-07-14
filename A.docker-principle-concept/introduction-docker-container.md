@@ -252,10 +252,9 @@ docker ps -a
  - **Multi-Stage Docker Images & Containers | Application Deployment**
  - **Composer-Based Docker Images & Containers | Application Deployment**
 
+- #### 🚀Single-Stage Docker Images & Containers | Application Deployment
 
-   #### 🚀Single-Stage Docker Images & Containers | Application Deployment
-
-   #### -📌Writing a Simple Application on Nodejs
+   - #### 📌Writing a Simple Application on Nodejs
 
 ```sh
 sudo apt update
@@ -268,7 +267,7 @@ npm init -y
 npm install express
 ```
 
-   #### -📌Create a File Named `app.js` and Add the Following Code
+   - #### 📌Create a File Named `app.js` and Add the Following Code
 
 ```sh
 const express = require('express');
@@ -285,13 +284,13 @@ app.listen(port, () => {
 
 ```
 
-   ##### -📌Run and Test Your Application in Host Machine
+   - #### 📌Run and Test Your Application in Host Machine
 
 You should see the message `Example app listening at http://localhost:3000`
 
 `node app.js`
 
-   ##### -📌Write a Dockerfile on Nodejs Application
+   - #### 📌Write a Dockerfile on Nodejs Application
 
 ```sh
 # Use an official Node.js runtime as a parent image
@@ -316,13 +315,13 @@ CMD ["node", "app.js"]
 
 ```
 
-   ##### -📌Build an Image: Use the Dockerfile to build a Docker image & Run from local Image
+   - #### 📌Build an Image: Use the Dockerfile to build a Docker image & Run from local Image
 
 `docker build -t my-node-app .`
 
 `docker run -it -d -p 3000:3000 my-node-app`
 
-   ##### -📌Tag | Login | Push the Docker Image
+   - #### 📌Tag | Login | Push the Docker Image
 
 `docker tag my-node-app saifulislam88/my-node-app:latest`
   
@@ -330,7 +329,7 @@ CMD ["node", "app.js"]
 
 `docker push saifulislam88/my-node-app:latest`
 
-   ##### -📌Pull and Run :  Download the image from Docker Hub on another machine | Create and run a container from the Docker image
+   - #### 📌Pull and Run :  Download the image from Docker Hub on another machine | Create and run a container from the Docker image
 
 `docker pull saifulislam88/my-node-app:latest`
 
@@ -339,8 +338,8 @@ CMD ["node", "app.js"]
 `docker ps -a`
 
 
-   #### 🚀Multi-Stage Docker Images & Containers | Application Deployment
-   #### 🚀Composer-Based Docker Images & Containers | Application Deployment
+- #### 🚀Multi-Stage Docker Images & Containers | Application Deployment
+- #### 🚀Composer-Based Docker Images & Containers | Application Deployment
 
 ##### 📌 The instructions/Command list in Dockerfile
 
