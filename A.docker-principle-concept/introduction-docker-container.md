@@ -201,7 +201,7 @@ So Docker is an open-source lightweight containerization technology. It allows y
  - Docker containers
  - Docker Composer
 
-#### 🔥Container Application Deployment lifecycle on Docker
+### 🔥Container Application Deployment Steps on Docker
 
 - [Install Docker: Set up Docker on your machine & Run your first container.](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#install-docker-set-up-docker-on-your-machine--run-your-first-container)
   - [Docker Installation Steps on Ubuntu](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#--installation-steps-on-ubuntu)
@@ -218,7 +218,7 @@ So Docker is an open-source lightweight containerization technology. It allows y
 - [Manage Containers: Use Docker commands to manage the lifecycle of containers.](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#manage-containers-use-docker-commands-to-manage-the-lifecycle-of-containers)
 - [Deploy Updates: Rebuild, retag, push updates, and restart the container to deploy updates.](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#deploy-updates-rebuild-retag-push-updates-and-restart-the-container-to-deploy-updates)
 
-##### - ✅Explain Basic Docker Usage Workflow
+#### - ✅Explain Basic Docker Usage Workflow
 
    - **🎯1.**	Everything starts with the Dockerfile. The Dockerfile is the source code of the Image.
 
@@ -228,7 +228,7 @@ So Docker is an open-source lightweight containerization technology. It allows y
 
    - **🎯4.**	Next, you can use the image to run containers. A running container is very similar, in many aspects, to a virtual machine (but without the hypervisor).
 
-##### - ✅Installation Steps on Ubuntu
+#### - ✅Installation Steps on Ubuntu
 
 ```sh
 sudo apt update
@@ -239,18 +239,18 @@ sudo apt update
 sudo apt install docker-ce
 sudo systemctl status docker
 ```
-##### - ✅Run Your First Container using Docker Registry(Public Repo: https://hub.docker.com/)
+#### - ✅Run Your First Container using Docker Registry(Public Repo: https://hub.docker.com/)
 
 ```sh
 docker run -it -d -p 8080:80 --name web nginx:latest
 docker run -it -d -p 80:80 --name web-nginx nginx
 docker ps -a
 ```
-##### ✅Deploy & Manage Your Own Container & Image
+#### ✅Deploy & Manage Your Own Container & Image
 
-   ##### - ✅[Single-Stage Docker Images & Containers | Application Deployment]
+   #### - ✅[Single-Stage Docker Images & Containers | Application Deployment]
 
-   ###### - 📌Writing a Simple Application on Nodejs
+   ##### - 📌Writing a Simple Application on Nodejs
 
 ```sh
 sudo apt update
@@ -263,7 +263,7 @@ npm init -y
 npm install express
 ```
 
-   ###### - 📌Create a File Named `app.js` and Add the Following Code
+   ##### - 📌Create a File Named `app.js` and Add the Following Code
 
 ```sh
 const express = require('express');
@@ -280,13 +280,13 @@ app.listen(port, () => {
 
 ```
 
-   ###### - 📌Run and Test Your Application in Host Machine
+   ##### - 📌Run and Test Your Application in Host Machine
 
 You should see the message `Example app listening at http://localhost:3000`
 
 `node app.js`
 
-   ###### - 📌Write a Dockerfile on Nodejs Application
+   ##### - 📌Write a Dockerfile on Nodejs Application
 
 ```sh
 # Use an official Node.js runtime as a parent image
@@ -311,13 +311,13 @@ CMD ["node", "app.js"]
 
 ```
 
-   ###### -📌Build an Image: Use the Dockerfile to build a Docker image & Run from local Image
+   ##### -📌Build an Image: Use the Dockerfile to build a Docker image & Run from local Image
 
 `docker build -t my-node-app .`
 
 `docker run -it -d -p 3000:3000 my-node-app`
 
-   ###### -📌Tag | Login | Push the Docker Image
+   ##### -📌Tag | Login | Push the Docker Image
 
 `docker tag my-node-app saifulislam88/my-node-app:latest`
   
@@ -334,7 +334,7 @@ CMD ["node", "app.js"]
 `docker ps -a`
 
 
-   ##### - ✅[Multi-Stage Docker Images & Containers | Application Deployment]
+   #### - ✅[Multi-Stage Docker Images & Containers | Application Deployment]
 
 ##### 📌 The instructions/Command list in Dockerfile
 
