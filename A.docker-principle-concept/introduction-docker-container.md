@@ -27,6 +27,7 @@
                - [Single-Stage Docker Images & Containers | Application Deployment]
                  - [Writing a Simple Application on Nodejs](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#--writing-a-simple-application-on-nodejs)
                  - [Create a file named app.js and add the following code:](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#--create-a-file-named-appjs-in-your-project-directory-and-add-the-following-code)
+                 - [Run and Test Your Application in Host Machine]
                  - [Write a Dockerfile on Nodejs project](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#--write-a-dockerfile-on-nodejs-project)
                  - [Build an Image: Use the Dockerfile to build a Docker image & Run](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#build-an-image-use-the-dockerfile-to-build-a-docker-image--run-from-local)
                  - [Tag | Login | Push the Docker Image.](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#tag--login--push-the-docker-image)
@@ -186,14 +187,19 @@ So Docker is an open-source lightweight containerization technology. It allows y
 <img src="https://github.com/saifulislam88/docker/assets/68442870/4810e275-4208-49b9-aaf2-631146eb6cbb" alt="Technological Transformation" width="600"/>
 
 
-**There are five major components in the Docker architecture:**
+**There are major components in the Docker architecture:**
 
  - Docker Daemon
  - Docker Clients
  - Docker Host
+ - Dockerfile
+
+   A **Dockerfile** is a text document that contains all the commands or instructions to bulid an image automatically by reading.
+
  - Docker Registry
  - Docker Images
  - Docker containers
+ - Docker Composer
 
 #### 🔥Container Application Deployment lifecycle on Docker
 
@@ -212,9 +218,17 @@ So Docker is an open-source lightweight containerization technology. It allows y
 - [Manage Containers: Use Docker commands to manage the lifecycle of containers.](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#manage-containers-use-docker-commands-to-manage-the-lifecycle-of-containers)
 - [Deploy Updates: Rebuild, retag, push updates, and restart the container to deploy updates.](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#deploy-updates-rebuild-retag-push-updates-and-restart-the-container-to-deploy-updates)
 
-##### 📌**Install Docker: Set up Docker on your machine & Run your first container**
-  
-  ###### - ✅Installation Steps on Ubuntu
+##### - ✅Explain Basic Docker Usage Workflow
+
+   - **🎯1.**	Everything starts with the Dockerfile. The Dockerfile is the source code of the Image.
+
+   - **🎯2.**	Once the Dockerfile is created, you build it to create the image of the container. The image is just the "compiled version" of the "source code" which is the Dockerfile.
+
+   - **🎯3.**	Once you have the image of the container, you should redistribute it using the registry. The registry is like a git repository -- you can push and pull images.
+
+   - **🎯4.**	Next, you can use the image to run containers. A running container is very similar, in many aspects, to a virtual machine (but without the hypervisor).
+
+##### - ✅Installation Steps on Ubuntu
 
 ```sh
 sudo apt update
@@ -225,30 +239,18 @@ sudo apt update
 sudo apt install docker-ce
 sudo systemctl status docker
 ```
-
-  ###### - ✅Run your first container using Docker Registry(Public Repo: https://hub.docker.com/)
+##### - ✅Run Your First Container using Docker Registry(Public Repo: https://hub.docker.com/)
 
 ```sh
 docker run -it -d -p 8080:80 --name web nginx:latest
 docker run -it -d -p 80:80 --name web-nginx nginx
 docker ps -a
 ```
+##### ✅Deploy & Manage Your Own Container & Image
 
-   ###### - ✅Explain basic Docker usage workflow
+   ##### - ✅[Single-Stage Docker Images & Containers | Application Deployment]
 
-   - **🎯1.**	Everything starts with the Dockerfile. The Dockerfile is the source code of the Image.
-
-   - **🎯2.**	Once the Dockerfile is created, you build it to create the image of the container. The image is just the "compiled version" of the "source code" which is the Dockerfile.
-
-   - **🎯3.**	Once you have the image of the container, you should redistribute it using the registry. The registry is like a git repository -- you can push and pull images.
-
-   - **🎯4.**	Next, you can use the image to run containers. A running container is very similar, in many aspects, to a virtual machine (but without the hypervisor).
-
-##### 📌**Create a Dockerfile: Define your application's environment and dependencies**
-
-A Dockerfile is a text document that contains all the commands or instructions to bulid an image automatically by reading.
-
-###### - ✅Writing a simple application on Nodejs
+   ###### - 📌Writing a Simple Application on Nodejs
 
 ```sh
 sudo apt update
@@ -261,7 +263,7 @@ npm init -y
 npm install express
 ```
 
-###### - ✅Create a file named app.js in your project directory and add the following code:
+   ###### - 📌Create a File Named `app.js` and Add the Following Code
 
 ```sh
 const express = require('express');
@@ -278,11 +280,13 @@ app.listen(port, () => {
 
 ```
 
-###### - ✅Run and Test Your Application: You should see the message `Example app listening at http://localhost:3000`
+   ###### - 📌Run and Test Your Application in Host Machine
+
+You should see the message `Example app listening at http://localhost:3000`
 
 `node app.js`
 
-###### - ✅Write a Dockerfile on Nodejs project
+   ###### - 📌Write a Dockerfile on Nodejs Application
 
 ```sh
 # Use an official Node.js runtime as a parent image
@@ -307,13 +311,13 @@ CMD ["node", "app.js"]
 
 ```
 
-##### 📌Build an Image: Use the Dockerfile to build a Docker image & Run from local
+   ###### -📌Build an Image: Use the Dockerfile to build a Docker image & Run from local Image
 
 `docker build -t my-node-app .`
 
 `docker run -it -d -p 3000:3000 my-node-app`
 
-##### 📌Tag | Login | Push the Docker Image
+   ###### -📌Tag | Login | Push the Docker Image
 
 `docker tag my-node-app saifulislam88/my-node-app:latest`
   
@@ -321,7 +325,7 @@ CMD ["node", "app.js"]
 
 `docker push saifulislam88/my-node-app:latest`
 
-##### 📌Pull and Run :  Download the image from Docker Hub on another machine | Create and run a container from the Docker image
+   ##### -📌Pull and Run :  Download the image from Docker Hub on another machine | Create and run a container from the Docker image
 
 `docker pull saifulislam88/my-node-app:latest`
 
@@ -329,6 +333,8 @@ CMD ["node", "app.js"]
 
 `docker ps -a`
 
+
+   ##### - ✅[Multi-Stage Docker Images & Containers | Application Deployment]
 
 ##### 📌 The instructions/Command list in Dockerfile
 
