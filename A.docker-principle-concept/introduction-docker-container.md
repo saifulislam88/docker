@@ -266,7 +266,6 @@ cd my-node-app
 npm init -y
 npm install express
 ```
-
    - #### 📌Create a File Named `app.js` and Add the Following Code
 
 ```sh
