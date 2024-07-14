@@ -248,7 +248,7 @@ docker ps -a
 ```
 #### ✅Deploy & Manage Your Own Container & Image
 
-- #### 🚀Single-Stage Docker Images & Containers | Application Deployment
+#### 🚀Single-Stage Docker Images & Containers | Application Deployment
 
 - ##### 📌Writing a Simple Application on Nodejs
 
