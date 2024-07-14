@@ -248,9 +248,9 @@ docker ps -a
 ```
 #### ✅Deploy & Manage Your Own Container & Image
 
- - **Single-Stage Docker Images & Containers | Application Deployment**
- - **Multi-Stage Docker Images & Containers | Application Deployment**
- - **Composer-Based Docker Images & Containers | Application Deployment**
+ - Single-Stage Docker Images & Containers | Application Deployment
+ - Multi-Stage Docker Images & Containers | Application Deployment
+ - Composer-Based Docker Images & Containers | Application Deployment
 
 - #### 🚀Single-Stage Docker Images & Containers | Application Deployment
 
@@ -266,6 +266,7 @@ cd my-node-app
 npm init -y
 npm install express
 ```
+
    - #### 📌Create a File Named `app.js` and Add the Following Code
 
 ```sh
