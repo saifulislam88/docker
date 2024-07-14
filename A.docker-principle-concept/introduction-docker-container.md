@@ -248,9 +248,9 @@ docker ps -a
 ```
 #### - ✅Deploy & Manage Your Own Container & Image
 
-   ####  - ✅[Single-Stage Docker Images & Containers | Application Deployment]
+   #### - ✅[Single-Stage Docker Images & Containers | Application Deployment]
 
-   #####  - 📌Writing a Simple Application on Nodejs
+   ####    - 📌Writing a Simple Application on Nodejs
 
 ```sh
 sudo apt update
@@ -263,7 +263,7 @@ npm init -y
 npm install express
 ```
 
-   #####  - 📌Create a File Named `app.js` and Add the Following Code
+   ####    - 📌Create a File Named `app.js` and Add the Following Code
 
 ```sh
 const express = require('express');
