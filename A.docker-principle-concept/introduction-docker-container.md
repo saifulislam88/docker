@@ -338,16 +338,16 @@ CMD ["node", "app.js"]
 
 Multi-stage Dockerfile is an essential feature provided by Docker that allows developers to create more efficient and smaller Docker images, resulting in faster builds, reduced image sizes, and improved security.
 
-
-Here is the real example of multi-stage Docker with Dockerfile. We converted [Single-Stage Dockerfile](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#write-a-dockerfile-on-nodejs-application) to Multi-Stage Dockerfile in below.
-
- - ##### 📌Benefits & Importance of Multi-Stage Builds
+  - ##### 📌Benefits & Importance of Multi-Stage Builds
 
       - Reduced Image Size
       - Faster Build Times
       - Improved Security
       - Simplified Build Pipeline
       - Portability and Consistency
+
+
+Here is the real example of multi-stage Docker with Dockerfile. We converted [Single-Stage Dockerfile](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#write-a-dockerfile-on-nodejs-application) to Multi-Stage Dockerfile in below.
 
 **Find the following Multi-Stage Dockerfile**
 ```sh
@@ -384,14 +384,14 @@ CMD ["node", "app.js"]
 ```
  - ##### 📌How It Works
 
-   - **Build Stage**:
+    - **Build Stage**:
 
         - The first stage (`build`) uses the `node:14` image to set up the build environment.
         - It sets the working directory, copies the `package.json` and `package-lock.json` files, and installs the dependencies using `npm install`.
         - It then copies the rest of the application code.
 
 
-  - **Production Stage:**
+   - **Production Stage:**
 
       - The second stage (`production`) uses a lighter `node:14-slim` image, which is smaller and optimized for production use.
       - It sets the working directory and copies the necessary files from the `build` stage using `COPY --from=build`.
