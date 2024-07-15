@@ -381,14 +381,13 @@ EXPOSE 3000
 CMD ["node", "app.js"]
 
 ```
-  -  ##### 📌****How It Works**
+-  ##### 📌****How It Works**
 
-    - **Build Stage**:
+   - **Build Stage**
 
-        - The first stage (`build`) uses the `node:14` image to set up the build environment.
-        - It sets the working directory, copies the `package.json` and `package-lock.json` files, and installs the dependencies using `npm install`.
-        - It then copies the rest of the application code.
-
+      - The first stage (`build`) uses the `node:14` image to set up the build environment.
+      - It sets the working directory, copies the `package.json` and `package-lock.json` files, and installs the dependencies using `npm install`.
+      - It then copies the rest of the application code.
 
    - **Production Stage:**
 
