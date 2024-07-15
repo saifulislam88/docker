@@ -335,6 +335,13 @@ CMD ["node", "app.js"]
 
 
 - #### 🚀Multi-Stage Docker Images & Containers | Application Deployment
+
+Multi-stage Dockerfile is an essential feature provided by Docker that allows developers to create more efficient and smaller Docker images, resulting in faster builds, reduced image sizes, and improved security.
+
+Reduced Image Size
+
+
+  
 - #### 🚀Composer-Based Docker Images & Containers | Application Deployment
 
 ##### 📌 The instructions/Command list in Dockerfile
