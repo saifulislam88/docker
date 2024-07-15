@@ -339,12 +339,11 @@ CMD ["node", "app.js"]
 Multi-stage Dockerfile is an essential feature provided by Docker that allows developers to create more efficient and smaller Docker images, resulting in faster builds, reduced image sizes, and improved security.
 
   -  ##### 📌**Benefits & Importance of Multi-Stage Builds**
-
-   - Reduced Image Size
-   - Faster Build Times
-   - Improved Security
-   - Simplified Build Pipeline
-   - Portability and Consistency
+    - Reduced Image Size
+    - Faster Build Times
+    - Improved Security
+    - Simplified Build Pipeline
+    - Portability and Consistency
 
 
 Here is the real example of Multi-Stage Dockerfile. We converted [Single-Stage Dockerfile](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#write-a-dockerfile-on-nodejs-application) to Multi-Stage Dockerfile in below.
