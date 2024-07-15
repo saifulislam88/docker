@@ -216,6 +216,8 @@ So Docker is an open-source lightweight containerization technology. It allows y
      - [Tag | Login | Push the Docker Image](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#tag--login--push-the-docker-image)
      - [Pull and Run - Download the image from Docker Hub](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#pull-and-run---download-the-image-from-docker-hub)
 - [Multi-Stage Docker Images & Containers | Application Deployment](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#multi-stage-docker-images--containers--application-deployment)
+     - [Benefits & Importance of Multi-Stage Builds](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#benefits--importance-of-multi-stage-builds)
+     - [Find the following Multi-Stage Dockerfile]
 - [Composer-Based Docker Images & Containers | Application Deployment](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#composer-based-docker-images--containers--application-deployment)
 
 #### ✅Explain Basic Docker Usage Workflow
@@ -349,7 +351,7 @@ Multi-stage Dockerfile is an essential feature provided by Docker that allows de
 
 Here is the real example of Multi-Stage Dockerfile. We converted [Single-Stage Dockerfile](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#write-a-dockerfile-on-nodejs-application) to Multi-Stage Dockerfile in below.
 
-**Find the following Multi-Stage Dockerfile**
+##### **Find the following Multi-Stage Dockerfile**
 ```sh
 # Stage 1: Build
 FROM node:14 as build
@@ -382,7 +384,7 @@ EXPOSE 3000
 CMD ["node", "app.js"]
 
 ```
--  ##### 📌****How It Works**
+-  ##### 📌**How It Works**
 
    - **Build Stage**
 
