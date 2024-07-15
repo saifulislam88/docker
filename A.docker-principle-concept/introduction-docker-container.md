@@ -217,7 +217,12 @@ So Docker is an open-source lightweight containerization technology. It allows y
      - [Pull and Run - Download the image from Docker Hub](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#pull-and-run---download-the-image-from-docker-hub)
 - [Multi-Stage Docker Images & Containers | Application Deployment](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#multi-stage-docker-images--containers--application-deployment)
      - [Benefits & Importance of Multi-Stage Builds](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#benefits--importance-of-multi-stage-builds)
-     - [Find the following Multi-Stage Dockerfile]
+     - [Find the following Multi-Stage Dockerfile](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#find-the-following-multi-stage-dockerfile)
+     - [How It Works](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#how-it-works)
+     - [Compare Single-Stage Image vs Muti-Stage Image]
+     - [Build an Image: Use the Dockerfile to build a Docker image & Run from local Image](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#build-an-image-use-the-dockerfile-to-build-a-docker-image--run-from-local-image)
+     - [Tag | Login | Push the Docker Image](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#tag--login--push-the-docker-image)
+     - [Pull and Run - Download the image from Docker Hub](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#pull-and-run---download-the-image-from-docker-hub)
 - [Composer-Based Docker Images & Containers | Application Deployment](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#composer-based-docker-images--containers--application-deployment)
 
 #### ✅Explain Basic Docker Usage Workflow
@@ -397,6 +402,33 @@ CMD ["node", "app.js"]
       - The second stage (`production`) uses a lighter `node:14-slim` image, which is smaller and optimized for production use.
       - It sets the working directory and copies the necessary files from the `build` stage using `COPY --from=build`.
       - It exposes port `3000` and specifies the command to run the application.
+
+  - ##### 📌Compare Single-Stage Image vs Muti-Stage Image
+  
+`docker image ls`
+
+  - ##### 📌Build an Image: Use the Dockerfile to build a Docker image & Run from local Image - Multi-Stage 
+
+`docker build -t my-node-app .`
+
+`docker run -it -d -p 3000:3000 my-node-app`
+
+   - ##### 📌Tag | Login | Push the Docker Image - Multi-Stage 
+
+`docker tag my-node-app saifulislam88/my-node-app:latest`
+  
+`docker login`
+
+`docker push saifulislam88/my-node-app:latest`
+
+   - ##### 📌Pull and Run - Download the image from Docker Hub - Multi-Stage 
+
+`docker pull saifulislam88/my-node-app:latest`
+
+`docker run -it -d -p 3001:3000 saifulislam88/my-node-app:latest`
+
+`docker ps -a`
+
 
 
   
