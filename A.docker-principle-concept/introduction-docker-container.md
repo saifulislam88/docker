@@ -219,10 +219,10 @@ So Docker is an open-source lightweight containerization technology. It allows y
      - [Benefits & Importance of Multi-Stage Builds](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#benefits--importance-of-multi-stage-builds)
      - [Find the following Multi-Stage Dockerfile](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#find-the-following-multi-stage-dockerfile)
      - [How It Works](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#how-it-works)
-     - [Compare Single-Stage Image vs Muti-Stage Image]
-     - [Build an Image: Use the Dockerfile to build a Docker image & Run from local Image](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#build-an-image-use-the-dockerfile-to-build-a-docker-image--run-from-local-image)
-     - [Tag | Login | Push the Docker Image](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#tag--login--push-the-docker-image)
-     - [Pull and Run - Download the image from Docker Hub](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#pull-and-run---download-the-image-from-docker-hub)
+     - [Compare Single-Stage Image vs Muti-Stage Image](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#compare-single-stage-image-vs-muti-stage-image)
+     - [Build an Image: Use the Dockerfile to build a Docker image & Run from local Image](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#build-an-image-use-the-dockerfile-to-build-a-docker-image--run-from-local-image---multi-stage)
+     - [Tag | Login | Push the Docker Image](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#tag--login--push-the-docker-image---multi-stage)
+     - [Pull and Run - Download the image from Docker Hub](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#pull-and-run---download-the-image-from-docker-hub---multi-stage)
 - [Composer-Based Docker Images & Containers | Application Deployment](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#composer-based-docker-images--containers--application-deployment)
 
 #### ✅Explain Basic Docker Usage Workflow
