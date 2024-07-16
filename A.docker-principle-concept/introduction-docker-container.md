@@ -55,11 +55,11 @@
 <img src="https://github.com/saifulislam88/docker/assets/68442870/401f1965-77cb-450a-b558-5ad80b1428ea" alt="Technological Transformation" width="800"/>
 </p>
 
-  - #### 🔥**What are key Reasons for Bare Metal -> Virtualization -> Cloud Transition:**
+  #### 🔥**What are key Reasons for Bare Metal -> Virtualization -> Cloud Transition:**
 
-     - **Bare Metal to Virtualization:** To improve resource utilization, flexibility, and isolation while maintaining control over the hardware.
-     - **Virtualization to Cloud:** To leverage scalability, cost efficiency, reduced maintenance, and global accessibility, enabling faster innovation and business agility.
-     - **Example:** Instead of having ten servers each running at 10% capacity, virtualization can consolidate them into one or two servers running at 80-90% capacity.
+    - **Bare Metal to Virtualization:** To improve resource utilization, flexibility, and isolation while maintaining control over the hardware.
+    - **Virtualization to Cloud:** To leverage scalability, cost efficiency, reduced maintenance, and global accessibility, enabling faster innovation and business agility.
+    - **Example:** Instead of having ten servers each running at 10% capacity, virtualization can consolidate them into one or two servers running at 80-90% capacity.
 
 - ### 🚀**Bare Metal**
 
@@ -76,25 +76,25 @@
 This software technology of virtualization system is known as a virtual machine monitor (VMM) or virtual manager, which separates compute environments from the actual physical infrastructure–this makes it possible to run several operating systems on one computer at the same time. 
 **A virtual machine monitor or VMM, also known as a hypervisor, is software that creates, runs and manage virtual machines (VMs).**
 
-  - **Resource Utilization:** Better utilization of physical hardware by running multiple VMs.
-  - **Isolation:** Strong isolation between applications.
-  - **Flexibility:** Easier to create, manage, and scale VMs.
-  - **Use Case:** Server consolidation, development and testing environments.
+- #### 🔥**Virtualization Features**
+
+   - **Resource Utilization:** Better utilization of physical hardware by running multiple VMs.
+   - **Isolation:** Strong isolation between applications.
+   - **Flexibility:** Easier to create, manage, and scale VMs.
+   - **Use Case:** Server consolidation, development and testing environments.
 
 <p align="right">
 <img src="https://github.com/saifulislam88/docker/assets/68442870/3c392818-aa43-4313-8893-72d83f1a5019" alt="Technological Transformation" width="800"/>
 </p>
 
-
-
-- #### 🔥Types of virtualization technology
+- #### 🔥**Types of Virtualization Technology**
  
-There are **two** main types of virtualization technology — 
+**There are **two** main types of virtualization technology —** 
 
-   - **📌KVM Virtualization**
-   - **📌OS Virtualization**
+   - **KVM Virtualization**
+   - **OS Virtualization**
 
-  - #### 📌KVM Virtualization
+- ### 📌KVM Virtualization
 
 **KVM (Kernel-Based Virtual Machine) Is An Open-Source Virtualization Technology That Allows You To Run Multiple Virtual Machines (VMs) On A Linux/Windows Host**. A Kernel-based Virtual Machine (KVM) allows you to turn Linux or Windows Server into a hypervisor, allowing your operating system to produce multiple virtual machines and isolated virtual environments.
 
@@ -102,28 +102,28 @@ There are **two** main types of virtualization technology —
  - **Type 2 - hypervisor** is running inside **Host OS**. Such hypervisors are VMWare Workstation are Oracle VirtualBox
 
   - ####  📌KVM Features
-    - Security
-    - Storage
-    - Hardware support
-    - Memory management
-    - Live migration
-    - Performance and scalability
-    - Scheduling and resource control
-    - Lower latency and higher prioritization
+     - **Security**
+     - **Storage**
+     - **Hardware support**
+     - **Memory management**
+     - **Live migration**
+     - **Performance and scalability**
+     - **Scheduling and resource control**
+     - **Lower latency and higher prioritization**
 
-#### 📌OS Virtualization
+ - ### 📌OS Virtualization
 
-**একটি কার্নেলের ওপর একাধিক isolated ইউসার স্পেইসের অস্তিত্বকে অপারেটিং সিস্টেম লেভেল ভার্চুয়ালাইজেসন বলে.**
-প্রতিটা ইউসার স্পেইসের রানটাইম এনভায়রনমেন্ট, ইউসার সেটিংস, ইত্যাদি ভিন্ন। আর একটা ইউসার স্পেইসের প্রসেস আরেকটা ইউসার স্পেইসে প্রবেশ করতে পারে না। মানে মেমোরি প্রটেকশন.
+**একটি কার্নেলের ওপর একাধিক isolated ইউসার স্পেইসের অস্তিত্বকে অপারেটিং সিস্টেম লেভেল ভার্চুয়ালাইজেসন বলে.** প্রতিটা ইউসার স্পেইসের রানটাইম এনভায়রনমেন্ট, ইউসার সেটিংস, ইত্যাদি ভিন্ন। আর একটা ইউসার স্পেইসের প্রসেস আরেকটা ইউসার স্পেইসে প্রবেশ করতে পারে না। মানে মেমোরি প্রটেকশন.
 
 **User Space and Kernel Space**
 
 অপারেটিং সিস্টেমে কিছু প্রসেস আছে যাদের সিস্টেম রিসোর্সগুলো (System Resource) সরাসরি অ্যাক্সেস করার প্রিভিলেজ (Privilege) থেকে থাকে। এই প্রসেসগুলো সাধারণত কার্নেল (Kernel) এবং ডিভাইস ড্রাইভার (Device Drivers) হয়ে থাকে। এসমস্ত প্রিভিলেজসম্পন্ন প্রসেসসমুহের মেমোরি প্রটেকশনের জন্যে ভার্চুয়াল মেমোরি স্পেইসের একাংশকে dedicate করে দেয়া হয় । এর কারনে ভার্চুয়াল মেমোরি দ্বিখণ্ডিত হয় । একটি খণ্ডে চলে কার্নেল আর ডিভাইস ড্রাইভারদের মত প্রিভিলেজ সম্পন্ন প্রসেসসমুহ আর এই খণ্ডটা কার্নেল স্পেইস (Kernel Space) নামে পরিচিত। আরেকটি খণ্ডে চলে বাকি সব সাধারণ প্রসেস যেমন ব্রাউসার, টেক্সট এডিটর, গেমস, ইত্যাদি আর এই খণ্ডটা ইউসার স্পেইস (User Space) নামে পরিচিত।
 
-##### 📌**Container**
+#### 📌**Container**
+
 Let's revisit the different ways of deploying applications we talked about—locally, On-prem, and in the cloud. Imagine a friend, like another developer, wants to work with your code. They'd need to get their own "copy" of it. They'd go to a platform like GitHub and download your project files. Then, they'd install any extra tools needed to run your code smoothly. But sometimes, their computer might have different settings that make it hard for your code to work right. That's where containers come in handy. They wrap up your code with all the settings and tools it needs to run, no matter where it's put.
 
-   - ###### 📌**More Defination**
+   - ##### 📌**More Definition**
       - **Containers are like pre-packaged sets of tools and code. You just plug them in, and they start working without any fuss.**
       - **Containers are predefined configurations and dependencies, along with the code files that make it possible for the code to run seamlessly.**
       - **একটা কার্নেলের ওপর আলাদা isolated ইউসার স্পেইসগুলোকে (User Space) কন্টেইনার (Container)বলা হয়.**
@@ -134,15 +134,15 @@ Let's revisit the different ways of deploying applications we talked about—loc
   <img src="https://github.com/saifulislam88/docker/assets/68442870/d3fb591d-3c6b-43ed-aa93-464187b108d2" alt="Technological Transformation" width="600"/>
 </p>
 
-###### 📌**Different Container or Container runtimes provider**
+   - ##### 📌**Different Container or Container runtimes provider**
 
-- Docker
-- Podman
-- Containerd
-- CRI-O
-- LXC
+       - Docker
+       - Podman
+       - Containerd
+       - CRI-O
+       - LXC
+[More Details](https://www.linkedin.com/posts/mmumshad_kodekloud-devops-kubernetes-activity-7153377989160751105-viax/?utm_source=share&utm_medium=member_desktop)
 
-https://www.linkedin.com/posts/mmumshad_kodekloud-devops-kubernetes-activity-7153377989160751105-viax/?utm_source=share&utm_medium=member_desktop
 
 ### 🚀**Docker**
 
