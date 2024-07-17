@@ -60,6 +60,9 @@
 - ### 🚀**Bare Metal**
 
 **Bare Metal** refers to a type of computing infrastructure where an application or service is run directly on physical hardware **without any intervening layers of virtualization or containerization**.
+
+- #### 🔥**bare Metal Features**
+
     - **Performance:** Direct access to hardware, no virtualization overhead.
     - **Control:** Full control over the hardware and software stack.
     - **Use Case:** High-performance computing, gaming servers, financial trading systems.
@@ -73,30 +76,29 @@ This software technology of virtualization system is known as a virtual machine 
 
   - #### 🔥**Virtualization Features**
 
-    - **Resource Utilization:** Better utilization of physical hardware by running multiple VMs.
-    - **Isolation:** Strong isolation between applications.
-    - **Flexibility:** Easier to create, manage, and scale VMs.
-    - **Use Case:** Server consolidation, development and testing environments.
+     - **Resource Utilization:** Better utilization of physical hardware by running multiple VMs.
+     - **Isolation:** Strong isolation between applications.
+     - **Flexibility:** Easier to create, manage, and scale VMs.
+     - **Use Case:** Server consolidation, development and testing environments.
 
 <p align="right">
 <img src="https://github.com/saifulislam88/docker/assets/68442870/3c392818-aa43-4313-8893-72d83f1a5019" alt="Technological Transformation" width="800"/>
 </p>
 
-- #### 🔥**Types of Virtualization Technology**
+  - #### 🔥**Types of Virtualization Technology**
  
-**There are **two** main types of virtualization technology —** 
+&nbsp;&nbsp;**There are **two** main types of virtualization technology**<br> 
+    - **KVM Virtualization**
+    - **OS Virtualization**
 
-   - **KVM Virtualization**
-   - **OS Virtualization**
-
-- ### 📌KVM Virtualization
+- ### 🚀KVM Virtualization
 
 **KVM (Kernel-Based Virtual Machine) Is An Open-Source Virtualization Technology That Allows You To Run Multiple Virtual Machines (VMs) On A Linux/Windows Host**. A Kernel-based Virtual Machine (KVM) allows you to turn Linux or Windows Server into a hypervisor, allowing your operating system to produce multiple virtual machines and isolated virtual environments.
 
  - **Type 1 - hypervisor** is running on **bare-metal hardware**. Such hypervisors are VMWare ESXi, Linux KVM, Hyper-V
  - **Type 2 - hypervisor** is running inside **Host OS**. Such hypervisors are VMWare Workstation are Oracle VirtualBox
 
-  - ####  📌KVM Features
+  - ####  🔥KVM Features
      - **Security**
      - **Storage**
      - **Hardware support**
@@ -106,7 +108,7 @@ This software technology of virtualization system is known as a virtual machine 
      - **Scheduling and resource control**
      - **Lower latency and higher prioritization**
 
- - ### 📌OS Virtualization
+ - ### 🚀OS Virtualization
 
 **একটি কার্নেলের ওপর একাধিক isolated ইউসার স্পেইসের অস্তিত্বকে অপারেটিং সিস্টেম লেভেল ভার্চুয়ালাইজেসন বলে.** প্রতিটা ইউসার স্পেইসের রানটাইম এনভায়রনমেন্ট, ইউসার সেটিংস, ইত্যাদি ভিন্ন। আর একটা ইউসার স্পেইসের প্রসেস আরেকটা ইউসার স্পেইসে প্রবেশ করতে পারে না। মানে মেমোরি প্রটেকশন.
 
@@ -114,7 +116,7 @@ This software technology of virtualization system is known as a virtual machine 
 
 অপারেটিং সিস্টেমে কিছু প্রসেস আছে যাদের সিস্টেম রিসোর্সগুলো (System Resource) সরাসরি অ্যাক্সেস করার প্রিভিলেজ (Privilege) থেকে থাকে। এই প্রসেসগুলো সাধারণত কার্নেল (Kernel) এবং ডিভাইস ড্রাইভার (Device Drivers) হয়ে থাকে। এসমস্ত প্রিভিলেজসম্পন্ন প্রসেসসমুহের মেমোরি প্রটেকশনের জন্যে ভার্চুয়াল মেমোরি স্পেইসের একাংশকে dedicate করে দেয়া হয় । এর কারনে ভার্চুয়াল মেমোরি দ্বিখণ্ডিত হয় । একটি খণ্ডে চলে কার্নেল আর ডিভাইস ড্রাইভারদের মত প্রিভিলেজ সম্পন্ন প্রসেসসমুহ আর এই খণ্ডটা কার্নেল স্পেইস (Kernel Space) নামে পরিচিত। আরেকটি খণ্ডে চলে বাকি সব সাধারণ প্রসেস যেমন ব্রাউসার, টেক্সট এডিটর, গেমস, ইত্যাদি আর এই খণ্ডটা ইউসার স্পেইস (User Space) নামে পরিচিত।
 
-#### 📌**Container**
+#### 🔥**Container**
 
 Let's revisit the different ways of deploying applications we talked about—locally, On-prem, and in the cloud. Imagine a friend, like another developer, wants to work with your code. They'd need to get their own "copy" of it. They'd go to a platform like GitHub and download your project files. Then, they'd install any extra tools needed to run your code smoothly. But sometimes, their computer might have different settings that make it hard for your code to work right. That's where containers come in handy. They wrap up your code with all the settings and tools it needs to run, no matter where it's put.
 
