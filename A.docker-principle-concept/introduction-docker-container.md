@@ -55,9 +55,9 @@
 
 #### &nbsp;&nbsp;🔥**What are key Reasons for Bare Metal -> Virtualization -> Cloud Transition**
 
-   - **Bare Metal to Virtualization:** To improve resource utilization, flexibility, and isolation while maintaining control over the hardware.
-   - **Virtualization to Cloud:** To leverage scalability, cost efficiency, reduced maintenance, and global accessibility, enabling faster innovation and business agility.
-   - **Example:** Instead of having ten servers each running at 10% capacity, virtualization can consolidate them into one or two servers running at 80-90% capacity.
+   &nbsp;&nbsp; - **Bare Metal to Virtualization:** To improve resource utilization, flexibility, and isolation while maintaining control over the hardware.
+   &nbsp;&nbsp; - **Virtualization to Cloud:** To leverage scalability, cost efficiency, reduced maintenance, and global accessibility, enabling faster innovation and business agility.
+   &nbsp;&nbsp; - **Example:** Instead of having ten servers each running at 10% capacity, virtualization can consolidate them into one or two servers running at 80-90% capacity.
 
 - ### 🚀**Bare Metal**
 
