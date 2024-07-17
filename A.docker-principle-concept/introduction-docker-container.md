@@ -87,9 +87,10 @@ This software technology of virtualization system is known as a virtual machine 
 
   - #### 🔥**Types of Virtualization Technology**
  
-&nbsp;&nbsp;**There are **two** main types of virtualization technology**<br> 
-    - **KVM Virtualization**
-    - **OS Virtualization**
+&nbsp;&nbsp;**There are **two** main types of virtualization technology**<br>
+ 
+  - **KVM Virtualization**
+  - **OS Virtualization**
 
 - ### 🚀KVM Virtualization
 
