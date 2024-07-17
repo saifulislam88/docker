@@ -6,8 +6,8 @@
 <br>
 ## &nbsp;&nbsp;**Table of Contents**
 - [Technological Transformation](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#technological-transformation)
-   - [Bare Metal](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#bare-metal)
-   - [Key Reasons for Transition](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#key-reasons-for-transition)
+  - [What are key Reasons for Bare Metal -> Virtualization -> Cloud Transition](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#what-are-key-reasons-for-bare-metal---virtualization---cloud-transition)
+- [Bare Metal](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#bare-metal)
 - [Virtualization](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#virtualization)
    - [KVM Virtualization](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#virtualization)
        - [KVM Features](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#kvm-features)
@@ -62,9 +62,9 @@
 
 **Bare Metal** refers to a type of computing infrastructure where an application or service is run directly on physical hardware **without any intervening layers of virtualization or containerization**.
 
-   - **Performance:** Direct access to hardware, no virtualization overhead.
-   - **Control:** Full control over the hardware and software stack.
-   - **Use Case:** High-performance computing, gaming servers, financial trading systems.
+    - **Performance:** Direct access to hardware, no virtualization overhead.
+    - **Control:** Full control over the hardware and software stack.
+    - **Use Case:** High-performance computing, gaming servers, financial trading systems.
 
  - ### 🚀**Virtualization**
 
