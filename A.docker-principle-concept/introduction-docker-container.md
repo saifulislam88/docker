@@ -226,7 +226,7 @@ So Docker is an open-source lightweight containerization technology. It allows y
      - [Build an Image: Use the Dockerfile to build a Docker image & Run from local Image](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#build-an-image-use-the-dockerfile-to-build-a-docker-image--run-from-local-image---multi-stage)
      - [Tag | Login | Push the Docker Image](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#tag--login--push-the-docker-image---multi-stage)
      - [Pull and Run - Download the image from Docker Hub](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#pull-and-run---download-the-image-from-docker-hub---multi-stage)
-- [Composer-Based Docker Images & Containers | Application Deployment](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#composer-based-docker-images--containers--application-deployment)
+  - [Composer-Based Docker Images & Containers | Application Deployment](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#composer-based-docker-images--containers--application-deployment)
 
 #### ✅Explain Basic Docker Usage Workflow
 
@@ -258,9 +258,9 @@ docker ps -a
 ```
 #### ✅Deploy & Manage Your Own Container & Image
 
-#### 🚀Single-Stage Docker Images & Containers | Application Deployment
+### 🚀Single-Stage Docker Images & Containers | Application Deployment
 
-- ##### 📌Writing a Simple Application on Nodejs
+- #### 📌Writing a Simple Application on Nodejs
 
 ```sh
 sudo apt update
@@ -273,7 +273,7 @@ npm init -y
 npm install express
 ```
 
-   - ##### 📌Create a File Named `app.js` and Add the Following Code
+   - #### 📌Create a File Named `app.js` and Add the Following Code
 
 ```sh
 const express = require('express');
@@ -290,13 +290,13 @@ app.listen(port, () => {
 
 ```
 
-   - ##### 📌Run and Test Your Application in Host Machine
+   - #### 📌Run and Test Your Application in Host Machine
 
 You should see the message `Example app listening at http://localhost:3000`
 
 `node app.js`
 
-   - ##### 📌Write a Dockerfile on Nodejs Application
+   - #### 📌Write a Dockerfile on Nodejs Application
 
 ```sh
 # Use an official Node.js runtime as a parent image
@@ -321,13 +321,13 @@ CMD ["node", "app.js"]
 
 ```
 
-   - ##### 📌Build an Image: Use the Dockerfile to build a Docker image & Run from local Image
+   - #### 📌Build an Image: Use the Dockerfile to build a Docker image & Run from local Image
 
 `docker build -t my-node-app .`
 
 `docker run -it -d -p 3000:3000 my-node-app`
 
-   - ##### 📌Tag | Login | Push the Docker Image
+   - #### 📌Tag | Login | Push the Docker Image
 
 `docker tag my-node-app saifulislam88/my-node-app:latest`
   
@@ -335,7 +335,7 @@ CMD ["node", "app.js"]
 
 `docker push saifulislam88/my-node-app:latest`
 
-   - ##### 📌Pull and Run - Download the image from Docker Hub
+   - #### 📌Pull and Run - Download the image from Docker Hub
 
 `docker pull saifulislam88/my-node-app:latest`
 
@@ -344,11 +344,11 @@ CMD ["node", "app.js"]
 `docker ps -a`
 
 
-- #### 🚀Multi-Stage Docker Images & Containers | Application Deployment
+### 🚀Multi-Stage Docker Images & Containers | Application Deployment
 
 Multi-stage Dockerfile is an essential feature provided by Docker that allows developers to create more efficient and smaller Docker images, resulting in faster builds, reduced image sizes, and improved security.
 
- ##### 📌**Benefits & Importance of Multi-Stage Builds**
+ #### 📌**Benefits & Importance of Multi-Stage Builds**
    
    - Reduced Image Size
    - Faster Build Times
@@ -359,7 +359,7 @@ Multi-stage Dockerfile is an essential feature provided by Docker that allows de
 
 Here is the real example of Multi-Stage Dockerfile. We converted [Single-Stage Dockerfile](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#write-a-dockerfile-on-nodejs-application) to Multi-Stage Dockerfile in below.
 
-##### **Find the following Multi-Stage Dockerfile**
+#### **Find the following Multi-Stage Dockerfile**
 ```sh
 # Stage 1: Build
 FROM node:14 as build
@@ -392,7 +392,7 @@ EXPOSE 3000
 CMD ["node", "app.js"]
 
 ```
--  ##### 📌**How It Works**
+-  #### 📌**How It Works**
 
    - **Build Stage**
 
@@ -406,17 +406,17 @@ CMD ["node", "app.js"]
       - It sets the working directory and copies the necessary files from the `build` stage using `COPY --from=build`.
       - It exposes port `3000` and specifies the command to run the application.
 
-  - ##### 📌Compare Single-Stage Image vs Muti-Stage Image
+  - #### 📌Compare Single-Stage Image vs Muti-Stage Image
   
 `docker image ls`
 
-  - ##### 📌Build an Image: Use the Dockerfile to build a Docker image & Run from local Image - Multi-Stage 
+  - #### 📌Build an Image: Use the Dockerfile to build a Docker image & Run from local Image - Multi-Stage 
 
 `docker build -t my-node-app .`
 
 `docker run -it -d -p 3000:3000 my-node-app`
 
-   - ##### 📌Tag | Login | Push the Docker Image - Multi-Stage 
+   - #### 📌Tag | Login | Push the Docker Image - Multi-Stage 
 
 `docker tag my-node-app saifulislam88/my-node-app:latest`
   
@@ -424,7 +424,7 @@ CMD ["node", "app.js"]
 
 `docker push saifulislam88/my-node-app:latest`
 
-   - ##### 📌Pull and Run - Download the image from Docker Hub - Multi-Stage 
+   - #### 📌Pull and Run - Download the image from Docker Hub - Multi-Stage 
 
 `docker pull saifulislam88/my-node-app:latest`
 
@@ -433,9 +433,7 @@ CMD ["node", "app.js"]
 `docker ps -a`
 
 
-
-  
-- #### 🚀Composer-Based Docker Images & Containers | Application Deployment
+### 🚀Composer-Based Docker Images & Containers | Application Deployment
 
 ##### 📌 The instructions/Command list in Dockerfile
 
