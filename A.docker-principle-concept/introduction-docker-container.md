@@ -61,7 +61,7 @@
 
 **Bare Metal** refers to a type of computing infrastructure where an application or service is run directly on physical hardware **without any intervening layers of virtualization or containerization**.
 
-- #### 🔥**bare Metal Features**
+- #### 🔥**Bare Metal Features**
 
     - **Performance:** Direct access to hardware, no virtualization overhead.
     - **Control:** Full control over the hardware and software stack.
