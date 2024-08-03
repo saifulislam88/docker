@@ -56,6 +56,8 @@
               - [VOLUME](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#volume)
           - [Manage Containers: Use Docker commands to manage the lifecycle of containers.](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#manage-containers-use-docker-commands-to-manage-the-lifecycle-of-containers)
           - [Deploy Updates: Rebuild, retag, push updates, and restart the container to deploy updates.](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#deploy-updates-rebuild-retag-push-updates-and-restart-the-container-to-deploy-updates)
+          - Docker Networking
+          - Docker Volumes and Storage
 - ### 🚀Technological Transformation
 <p align="right">
 <img src="https://github.com/saifulislam88/docker/assets/68442870/401f1965-77cb-450a-b558-5ad80b1428ea" alt="Technological Transformation" width="800"/>
@@ -659,8 +661,43 @@ Create a volume at /data
 ##### 📌Manage Containers: Use Docker commands to manage the lifecycle of containers
 ##### 📌Deploy Updates: Rebuild, retag, push updates, and restart the container to deploy updates
 
+#### Docker Networking
 
 
+docker run -d --name my_container nginx
+docker network ls
+docker network inspect bridge
+docker network inspect my_custom_network
+docker network create my_custom_network
+ docker network create --driver bridge mycustom_bridge
+docker network create --subnet=192.168.10.0/24 my_custom_network
+docker network create my_flask_network
+
+docker run -d --name my_container --network my_custom_network nginx
+docker run -d --name container1 --network my_custom_network nginx
+docker run -d --name container2 --network my_custom_network alpine sleep 3600
+docker ps
+docker inspect <container_id_or_name>
+docker inspect <container_id_or_name> | grep "IPAddress"
+docker inspect a907e362bf59 | egrep "MacAddress|IPAddress"
+
+To change the default IP address range used by Docker's docker0 bridge network, you need to modify the Docker daemon's configuration.
+
+
+sudo systemctl stop docker
+sudo vim /etc/docker/daemon.json
+{
+  "bip": "192.168.1.1/24"
+}
+sudo systemctl start docker
+ip addr show docker0
+
+
+
+
+#### Docker Volumes and Storage
+
+docker run -d --name my_flask_app --network my_flask_network -v my_flask_volume:/app my_flask_app
 
 
 
