@@ -661,7 +661,32 @@ Create a volume at /data
 ##### 📌Manage Containers: Use Docker commands to manage the lifecycle of containers
 ##### 📌Deploy Updates: Rebuild, retag, push updates, and restart the container to deploy updates
 
-#### Docker Networking
+#### Docker Networking - Unlocking the Mysteries of Networks.
+
+Docker leverages networking for container communication.
+
+**Different types of Docker Networking**
+
+![image](https://github.com/user-attachments/assets/6a503a71-b141-4682-9865-f563de14c07e)
+
+Networking Models:
+
+- **Docker Single Host Networking**\
+Docker Single Host Networking provides communication between containers on the same host via a virtual network bridge, allowing for smooth interaction while isolating them from external networks.
+![image](https://github.com/user-attachments/assets/8e500731-2f5f-46b2-9334-71dfaef2cfae)
+
+ - Bridge - NAT - docker0
+ - Host - Uses host network
+ - None - Isolated / no networking
+
+
+- Docker Multi-Host Networking
+  ![image](https://github.com/user-attachments/assets/beaa9b37-8a43-4ded-ad2c-ca47f52b0b33)
+
+ - Overlay - Swarm mode
+ - Macvlan - Legacy applications needing direct connection to physical network
+ - 3rd party network plugins
+
 
 
 docker run -d --name my_container nginx
@@ -698,7 +723,6 @@ ip addr show docker0
 #### Docker Volumes and Storage
 
 docker run -d --name my_flask_app --network my_flask_network -v my_flask_volume:/app my_flask_app
-
 
 
 
