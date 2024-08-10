@@ -1,7 +1,7 @@
 
 ![image](https://github.com/user-attachments/assets/a33d97af-2ad3-4143-a1c9-841bc0a90212)
 
-# Installing Docker on Windows Server 2022: A Step-by-Step Guide
+**Installing Docker on Windows Server 2022: A Step-by-Step Guide**
 
 
 ## Step 1: Install DockerMsftProvider Module
