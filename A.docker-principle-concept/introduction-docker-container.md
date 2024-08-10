@@ -703,7 +703,7 @@ Docker Multi-Host Networking enables containers running on various hosts to comm
 
 #### Docker Single Host Networking
 
-##### 📌Bridge (default)
+##### 📌**Bridge (default)**
 
 When docker containers are created without specifying a network, they are automatically placed in the default bridge network. Where it works like - **`Bridge<NAT<docker0`**
 
