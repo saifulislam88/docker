@@ -4,6 +4,6 @@
 
 To kickstart the installation process, we need to install the DockerMsftProvider module. Execute the following command in **PowerShell**:
 
-```powershell
+```sh
 **Install-Module DockerMsftProvider -Force**
-
+```
