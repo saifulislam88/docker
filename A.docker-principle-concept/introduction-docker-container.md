@@ -671,29 +671,34 @@ Create a volume at /data
 
 Docker leverages networking for container communication.
 
+<br>
+
 **Different types of Docker Networking**
 
 ![image](https://github.com/user-attachments/assets/6a503a71-b141-4682-9865-f563de14c07e)
 
-Networking Models:
 
-- **Docker Single Host Networking**\
+**Networking Models:**
+
+- [**Docker Single Host Networking**](#Docker-Single-Host-Networking)\
 Docker Single Host Networking provides communication between containers on the same host via a virtual network bridge, allowing for smooth interaction while isolating them from external networks.
+
 ![image](https://github.com/user-attachments/assets/8e500731-2f5f-46b2-9334-71dfaef2cfae)
 
+ - **Bridge (default)**
+ - **Bridge (user-defined)**
+ - **Host**
+ - **None**
 
- - Bridge (default)
- - Bridge (user-defined)
- - Host - Uses host network
- - None - Isolated / no networking
+- [**Docker Multi-Host Networking**](Docker-Multi-Host-Networking)\
 
+Docker Multi-Host Networking enables containers running on various hosts to communicate with one another via overlay networks, offering seamless connectivity across distributed settings while abstracting underlying network difficulties.
 
-- **Docker Multi-Host Networking**\
   ![image](https://github.com/user-attachments/assets/beaa9b37-8a43-4ded-ad2c-ca47f52b0b33)
 
- - Overlay - Swarm mode
- - Macvlan - Legacy applications needing direct connection to physical network
- - 3rd party network plugins
+ - **Overlay**
+ - **Macvlan**
+ - **3rd party network plugins**
 
 
 #### Docker Single Host Networking
