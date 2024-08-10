@@ -661,7 +661,7 @@ Create a volume at /data
 ##### 📌Manage Containers: Use Docker commands to manage the lifecycle of containers
 ##### 📌Deploy Updates: Rebuild, retag, push updates, and restart the container to deploy updates
 
-#### Docker Networking - Unlocking the Mysteries of Networks.
+### [Docker Networking - Unlocking the Mysteries of Networks]()
 
 Docker leverages networking for container communication.
 
@@ -675,12 +675,14 @@ Networking Models:
 Docker Single Host Networking provides communication between containers on the same host via a virtual network bridge, allowing for smooth interaction while isolating them from external networks.
 ![image](https://github.com/user-attachments/assets/8e500731-2f5f-46b2-9334-71dfaef2cfae)
 
- - Bridge - NAT - docker0
+
+ - Bridge (default)
+ - Bridge (user-defined)
  - Host - Uses host network
  - None - Isolated / no networking
 
 
-- Docker Multi-Host Networking
+- **Docker Multi-Host Networking**\
   ![image](https://github.com/user-attachments/assets/beaa9b37-8a43-4ded-ad2c-ca47f52b0b33)
 
  - Overlay - Swarm mode
@@ -688,23 +690,41 @@ Docker Single Host Networking provides communication between containers on the s
  - 3rd party network plugins
 
 
+#### Docker Single Host Networking
 
-docker run -d --name my_container nginx
-docker network ls
-docker network inspect bridge
-docker network inspect my_custom_network
-docker network create my_custom_network
- docker network create --driver bridge mycustom_bridge
-docker network create --subnet=192.168.10.0/24 my_custom_network
-docker network create my_flask_network
+#### Bridge (default)
+#### Bridge (user-defined)
+#### Host
+#### None
 
-docker run -d --name my_container --network my_custom_network nginx
-docker run -d --name container1 --network my_custom_network nginx
-docker run -d --name container2 --network my_custom_network alpine sleep 3600
-docker ps
-docker inspect <container_id_or_name>
-docker inspect <container_id_or_name> | grep "IPAddress"
-docker inspect a907e362bf59 | egrep "MacAddress|IPAddress"
+#### Docker Multi-Host Networking
+
+ - Overlay - Swarm mode
+ - Macvlan - Legacy applications needing direct connection to physical network
+ - 3rd party network plugins
+
+
+
+
+`ip a`
+`ip addr show`
+`docker network ls`
+`ocker network inspect bridge`
+`docker ps`
+
+`docker network create my_custom_network` | `docker network create my_flask_network`
+`docker network inspect my_custom_network`
+
+`docker network create --driver bridge mycustom_bridge`
+`docker network create --subnet=192.168.10.0/24 my_custom_network`
+`docker run -d --name my_container nginx`
+`docker run -d --name my_container --network my_custom_network nginx`
+`docker run -d --name container1 --network my_custom_network nginx`
+`docker run -d --name container2 --network my_custom_network alpine sleep 3600`
+`docker ps`
+`docker inspect <container_id_or_name>`
+`docker inspect <container_id_or_name> | grep "IPAddress"`
+`docker inspect a907e362bf59 | egrep "MacAddress|IPAddress"`
 
 To change the default IP address range used by Docker's docker0 bridge network, you need to modify the Docker daemon's configuration.
 
@@ -716,6 +736,11 @@ sudo vim /etc/docker/daemon.json
 }
 sudo systemctl start docker
 ip addr show docker0
+
+
+
+
+
 
 
 
