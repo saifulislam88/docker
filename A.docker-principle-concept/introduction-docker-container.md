@@ -703,10 +703,35 @@ Docker Multi-Host Networking enables containers running on various hosts to comm
 
 #### Docker Single Host Networking
 
-#### Bridge (default)
-#### Bridge (user-defined)
-#### Host
-#### None
+##### 📌Bridge (default)
+
+When docker containers are created without specifying a network, they are automatically placed in the default bridge network. Where it works like - **`Bridge<NAT<docker0`**
+
+`ip a`
+`ip addr show`
+`docker network ls`
+`docker network inspect bridge`
+**`docker run -d --name my_container nginx`**
+**`docker run -dit --name Rock nginx`**
+`docker ps`
+`docker inspect <container_id_or_name>`
+`docker inspect <container_id_or_name> | grep "IPAddress"`
+`docker inspect <container_id_or_name> | egrep "MacAddress|IPAddress"`
+
+
+
+##### 📌Bridge (user-defined)
+
+Bridge - NAT - docker0
+
+##### 📌Host
+##### 📌None
+
+None is a docker network-type where the container is not attached to any network. As a result, the container is unable to communicate with any external network or other containers. It is isolated from every other network.
+
+```sh
+docker run -d --network none --name my_nginx nginx
+```
 
 #### Docker Multi-Host Networking
 
@@ -720,8 +745,10 @@ Docker Multi-Host Networking enables containers running on various hosts to comm
 `ip a`
 `ip addr show`
 `docker network ls`
-`ocker network inspect bridge`
+`docker network inspect bridge`
 `docker ps`
+`docker run -d --name my_container nginx`
+
 
 `docker network create my_custom_network` | `docker network create my_flask_network`
 `docker network inspect my_custom_network`
@@ -736,6 +763,14 @@ Docker Multi-Host Networking enables containers running on various hosts to comm
 `docker inspect <container_id_or_name>`
 `docker inspect <container_id_or_name> | grep "IPAddress"`
 `docker inspect a907e362bf59 | egrep "MacAddress|IPAddress"`
+
+
+docker network connect
+docker network disconnect
+docker network rm
+docker inspect -f "{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}"
+
+
 
 To change the default IP address range used by Docker's docker0 bridge network, you need to modify the Docker daemon's configuration.
 
