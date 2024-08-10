@@ -717,6 +717,12 @@ When docker containers are created without specifying a network, they are automa
 `docker inspect <container_id_or_name>`\
 `docker inspect <container_id_or_name> | grep "IPAddress"`\
 `docker inspect <container_id_or_name> | egrep "MacAddress|IPAddress"`\
+**`docker network ls`\
+`docker network disconnect <network_name> <container_id_or_name>`\
+`docker inspect 1fe4bc908ce9 | grep IP`\
+`docker network connect <network_name> <container_id_or_name>`\
+`docker inspect <container_id_or_name> | grep IP`**\
+
 
 
 
