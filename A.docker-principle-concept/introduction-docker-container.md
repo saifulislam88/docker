@@ -707,16 +707,16 @@ Docker Multi-Host Networking enables containers running on various hosts to comm
 
 When docker containers are created without specifying a network, they are automatically placed in the default bridge network. Where it works like - **`Bridge<NAT<docker0`**
 
-`ip a`
-`ip addr show`
-`docker network ls`
-`docker network inspect bridge`
-**`docker run -d --name my_container nginx`**
-**`docker run -dit --name Rock nginx`**
-`docker ps`
-`docker inspect <container_id_or_name>`
-`docker inspect <container_id_or_name> | grep "IPAddress"`
-`docker inspect <container_id_or_name> | egrep "MacAddress|IPAddress"`
+`ip a`\
+`ip addr show`\
+`docker network ls`\
+`docker network inspect bridge`\
+**`docker run -d --name my_container nginx`**\
+**`docker run -dit --name Rock nginx`**\
+`docker ps`\
+`docker inspect <container_id_or_name>`\
+`docker inspect <container_id_or_name> | grep "IPAddress"`\
+`docker inspect <container_id_or_name> | egrep "MacAddress|IPAddress"`\
 
 
 
