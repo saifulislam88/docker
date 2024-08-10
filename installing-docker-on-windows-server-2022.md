@@ -6,7 +6,7 @@
 
 ### Step 1: Install DockerMsftProvider Module
 
-At first **Open PowerShell as an administrator**\
+At first **Open PowerShell as an administrator**
 
 ```sh
 powershell Start-Process powershell -Verb runAs
