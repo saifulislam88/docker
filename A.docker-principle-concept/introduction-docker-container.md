@@ -673,8 +673,6 @@ Docker leverages networking for container communication.
 
 <br>
 
-**Different types of Docker Networking**
-
 ![image](https://github.com/user-attachments/assets/6a503a71-b141-4682-9865-f563de14c07e)
 
 
@@ -847,3 +845,23 @@ docker run -d --name my_flask_app --network my_flask_network -v my_flask_volume:
 
 
 ![image](https://github.com/saifulislam88/docker/assets/68442870/0e56ca7a-8b0e-455b-8b8e-ae92660e00e4)
+
+
+
+#### Docker Compose 
+
+
+
+1. Install Docker (if not already installed)
+
+sudo apt-get update
+sudo apt-get install -y docker.io
+
+2. Download the Latest Docker Compose
+
+sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+docker-compose --version
+
+
