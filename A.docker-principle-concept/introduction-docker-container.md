@@ -682,10 +682,10 @@ Docker leverages networking for container communication.
 
 Docker Single Host Networking provides communication between containers on the same host via a virtual network bridge, allowing for smooth interaction while isolating them from external networks.
 
- - **Bridge (default)**
- - **Bridge (user-defined)**
- - **Host**
- - **None**
+ - [Bridge (default)](#Bridge-default)
+ - [Bridge (user-defined)](#Bridge-user-defined)
+ - [Host](#host)
+ - [None](#none)
 <br>
 
 ![image](https://github.com/user-attachments/assets/8e500731-2f5f-46b2-9334-71dfaef2cfae)
@@ -712,6 +712,25 @@ When docker containers are created without specifying a network, they are automa
 `docker inspect 1fe4bc908ce9 | grep IP`\
 `docker network connect <network_name> <container_id_or_name>`\
 `docker inspect <container_id_or_name> | grep IP`**
+
+**To change the default IP address range used by Docker's docker0 bridge network, you need to modify the Docker daemon's configuration.**
+
+
+**`sudo systemctl stop docker`\
+`sudo vim /etc/docker/daemon.json`**
+
+```sh
+{
+  "bip": "192.168.1.1/24"
+}
+
+```
+**`sudo systemctl start docker`\
+`ip addr show docker0`**
+
+<br>
+
+
 
 
 ##### 📌Bridge (user-defined)
@@ -744,23 +763,6 @@ docker network disconnect my_custom_network <container_id_or_name>
 docker network rm
 docker inspect -f "{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}"
 
-
-**To change the default IP address range used by Docker's docker0 bridge network, you need to modify the Docker daemon's configuration.**
-
-
-**`sudo systemctl stop docker`\
-`sudo vim /etc/docker/daemon.json`**
-
-```sh
-{
-  "bip": "192.168.1.1/24"
-}
-
-```
-**`sudo systemctl start docker`\
-`ip addr show docker0`**
-
-<br>
 
 ##### 📌Host
 
