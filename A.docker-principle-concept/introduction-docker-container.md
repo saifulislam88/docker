@@ -669,7 +669,7 @@ Create a volume at /data
 
 ### [Docker Networking - Unlocking the Mysteries of Networks]()
 
-Docker leverages networking for container communication.
+Docker leverages networking for container communication. Docker has a pluggable networking system where plugins are called drivers.
 
 <br>
 
@@ -678,7 +678,7 @@ Docker leverages networking for container communication.
 
 **Networking Models:**
 
-#### - [**Docker Single Host Networking**](#Docker-Single-Host-Networking)
+### - [**Docker Single Host Networking**](#Docker-Single-Host-Networking)
 
 Docker Single Host Networking provides communication between containers on the same host via a virtual network bridge, allowing for smooth interaction while isolating them from external networks.
 
@@ -692,7 +692,7 @@ Docker Single Host Networking provides communication between containers on the s
 
 <br>
 
-##### 📌**Bridge (default)**
+### 📌 Bridge (default)
 
 When docker containers are created without specifying a network, they are automatically placed in the default bridge network. Where it works like - **`Bridge<NAT<docker0`**
 
@@ -733,7 +733,7 @@ When docker containers are created without specifying a network, they are automa
 
 
 
-##### 📌Bridge (user-defined)
+### 📌 Bridge (user-defined)
 
 This network type is similar to the user-defined bridge network. It also creates an internal private network within the host, but it does not come already created by Docker. You have to create it yourself.
 `Bridge - NAT - <network_name>`
@@ -764,7 +764,7 @@ docker network rm
 docker inspect -f "{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}"
 
 
-##### 📌Host
+### 📌 Host
 
 Containers in host network mode directly utilize your host's network stack, lacking isolation. They do not receive separate IP addresses, and any port bindings are directly exposed on your host's network interface. In practical terms, if a container process is configured to listen on port 80, it will bind to your host machine's IP address on port 80.
 
@@ -803,7 +803,7 @@ services:
 `docker-compose up -d`\
 `docker ps`\
 
-##### 📌None
+### 📌 None
 
 None is a docker network-type where the container is not attached to any network. As a result, the container is unable to communicate with any external network or other containers. It is isolated from every other network.
 
@@ -811,7 +811,7 @@ None is a docker network-type where the container is not attached to any network
 docker run -d --network none --name my_nginx nginx
 ```
 
-#### - [**Docker Multi-Host Networking**](Docker-Multi-Host-Networking)
+### - [**Docker Multi-Host Networking**](Docker-Multi-Host-Networking)
 
 Docker Multi-Host Networking enables containers running on various hosts to communicate with one another via overlay networks, offering seamless connectivity across distributed settings while abstracting underlying network difficulties.
 
