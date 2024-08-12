@@ -678,32 +678,38 @@ Docker leverages networking for container communication.
 
 **Networking Models:**
 
-- [**Docker Single Host Networking**](#Docker-Single-Host-Networking)\
-Docker Single Host Networking provides communication between containers on the same host via a virtual network bridge, allowing for smooth interaction while isolating them from external networks.
+- [**Docker Single Host Networking**](#Docker-Single-Host-Networking)
 
-![image](https://github.com/user-attachments/assets/8e500731-2f5f-46b2-9334-71dfaef2cfae)
+Docker Single Host Networking provides communication between containers on the same host via a virtual network bridge, allowing for smooth interaction while isolating them from external networks.
 
  - **Bridge (default)**
  - **Bridge (user-defined)**
  - **Host**
  - **None**
+<br>
+![image](https://github.com/user-attachments/assets/8e500731-2f5f-46b2-9334-71dfaef2cfae)
 
-- [**Docker Multi-Host Networking**](Docker-Multi-Host-Networking)\
+<br>
+
+- [**Docker Multi-Host Networking**](Docker-Multi-Host-Networking)
 
 Docker Multi-Host Networking enables containers running on various hosts to communicate with one another via overlay networks, offering seamless connectivity across distributed settings while abstracting underlying network difficulties.
-
-  ![image](https://github.com/user-attachments/assets/beaa9b37-8a43-4ded-ad2c-ca47f52b0b33)
 
  - **Overlay**
  - **Macvlan**
  - **3rd party network plugins**
+<br>
+  ![image](https://github.com/user-attachments/assets/beaa9b37-8a43-4ded-ad2c-ca47f52b0b33)
 
+<br>
 
 #### Docker Single Host Networking
 
 ##### 📌**Bridge (default)**
 
 When docker containers are created without specifying a network, they are automatically placed in the default bridge network. Where it works like - **`Bridge<NAT<docker0`**
+
+**Required Commands**
 
 `ip a`\
 `ip addr show`\
@@ -722,13 +728,13 @@ When docker containers are created without specifying a network, they are automa
 `docker inspect <container_id_or_name> | grep IP`**
 
 
-
-
 ##### 📌Bridge (user-defined)
 
 This network type is similar to the user-defined bridge network. It also creates an internal private network within the host, but it does not come already created by Docker. You have to create it yourself.
 `Bridge - NAT - <network_name>`
 
+
+**Required Commands**
 
 `ip a`\
 `ip addr show`\
@@ -755,25 +761,22 @@ docker network rm
 docker inspect -f "{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}"
 
 
+**To change the default IP address range used by Docker's docker0 bridge network, you need to modify the Docker daemon's configuration.**
 
-To change the default IP address range used by Docker's docker0 bridge network, you need to modify the Docker daemon's configuration.
 
+**`sudo systemctl stop docker`\
+`sudo vim /etc/docker/daemon.json`**
 
-sudo systemctl stop docker
-sudo vim /etc/docker/daemon.json
+```sh
 {
   "bip": "192.168.1.1/24"
 }
-sudo systemctl start docker
-ip addr show docker0
 
+```
+**`sudo systemctl start docker`\
+`ip addr show docker0`**
 
-
-
-
-
-
-
+<br>
 
 ##### 📌Host
 
@@ -829,19 +832,9 @@ docker run -d --network none --name my_nginx nginx
  - 3rd party network plugins
 
 
-
-
-
-
-
-
 #### Docker Volumes and Storage
 
 docker run -d --name my_flask_app --network my_flask_network -v my_flask_volume:/app my_flask_app
-
-
-
-
 
 
 ![image](https://github.com/saifulislam88/docker/assets/68442870/0e56ca7a-8b0e-455b-8b8e-ae92660e00e4)
@@ -849,7 +842,6 @@ docker run -d --name my_flask_app --network my_flask_network -v my_flask_volume:
 
 
 #### Docker Compose 
-
 
 
 1. Install Docker (if not already installed)
