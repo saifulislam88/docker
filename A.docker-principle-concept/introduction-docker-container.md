@@ -687,6 +687,7 @@ Docker Single Host Networking provides communication between containers on the s
  - **Host**
  - **None**
 <br>
+
 ![image](https://github.com/user-attachments/assets/8e500731-2f5f-46b2-9334-71dfaef2cfae)
 
 <br>
@@ -699,6 +700,7 @@ Docker Multi-Host Networking enables containers running on various hosts to comm
  - **Macvlan**
  - **3rd party network plugins**
 <br>
+
   ![image](https://github.com/user-attachments/assets/beaa9b37-8a43-4ded-ad2c-ca47f52b0b33)
 
 <br>
