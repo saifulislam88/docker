@@ -678,7 +678,7 @@ Docker leverages networking for container communication.
 
 **Networking Models:**
 
-- [**Docker Single Host Networking**](#Docker-Single-Host-Networking)
+#### - [**Docker Single Host Networking**](#Docker-Single-Host-Networking)
 
 Docker Single Host Networking provides communication between containers on the same host via a virtual network bridge, allowing for smooth interaction while isolating them from external networks.
 
@@ -692,26 +692,10 @@ Docker Single Host Networking provides communication between containers on the s
 
 <br>
 
-- [**Docker Multi-Host Networking**](Docker-Multi-Host-Networking)
-
-Docker Multi-Host Networking enables containers running on various hosts to communicate with one another via overlay networks, offering seamless connectivity across distributed settings while abstracting underlying network difficulties.
-
- - **Overlay**
- - **Macvlan**
- - **3rd party network plugins**
-<br>
-
-  ![image](https://github.com/user-attachments/assets/beaa9b37-8a43-4ded-ad2c-ca47f52b0b33)
-
-<br>
-
-#### Docker Single Host Networking
-
 ##### 📌**Bridge (default)**
 
 When docker containers are created without specifying a network, they are automatically placed in the default bridge network. Where it works like - **`Bridge<NAT<docker0`**
 
-**Required Commands**
 
 `ip a`\
 `ip addr show`\
@@ -735,8 +719,6 @@ When docker containers are created without specifying a network, they are automa
 This network type is similar to the user-defined bridge network. It also creates an internal private network within the host, but it does not come already created by Docker. You have to create it yourself.
 `Bridge - NAT - <network_name>`
 
-
-**Required Commands**
 
 `ip a`\
 `ip addr show`\
@@ -827,7 +809,18 @@ None is a docker network-type where the container is not attached to any network
 docker run -d --network none --name my_nginx nginx
 ```
 
-#### Docker Multi-Host Networking
+#### - [**Docker Multi-Host Networking**](Docker-Multi-Host-Networking)
+
+Docker Multi-Host Networking enables containers running on various hosts to communicate with one another via overlay networks, offering seamless connectivity across distributed settings while abstracting underlying network difficulties.
+
+ - **Overlay**
+ - **Macvlan**
+ - **3rd party network plugins**
+<br>
+
+  ![image](https://github.com/user-attachments/assets/beaa9b37-8a43-4ded-ad2c-ca47f52b0b33)
+
+<br>
 
  - Overlay - Swarm mode
  - Macvlan - Legacy applications needing direct connection to physical network
