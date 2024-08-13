@@ -794,14 +794,26 @@ Containers in host network mode directly utilize your host's network stack, lack
 services:
   web:
     image: nginx:latest
-    container_name: my_nginx_compose
+    container_name: my_nginx_compose_default
+    restart: unless-stopped
+```
+
+**OR**
+
+```sh
+services:
+  web:
+    image: nginx:latest
+    container_name: my_nginx_compose_host
+    network_mode: "host"  # Use the host network
     ports:
       - "8080:80"  # Maps port 8080 on the host to port 80 in the container
     restart: unless-stopped
 ```
+
 `docker-compose down`\
 `docker-compose up -d`\
-`docker ps`\
+`docker ps`
 
 ### 📌 None
 
