@@ -69,7 +69,9 @@
 🔗 **`Virtualization-> Cloud:`** To leverage scalability, cost efficiency, reduced maintenance, and global accessibility, enabling faster innovation and business agility.\
 🔗 **`Example:`** Instead of having ten servers each running at 10% capacity, virtualization can consolidate them into one or two servers running at 80-90% capacity.
 
-- ### 🚀**Bare Metal**
+<br>
+
+### 🚀**Bare Metal**
 
 **Bare Metal** refers to a type of computing infrastructure where an application or service is run directly on physical hardware **without any intervening layers of virtualization or containerization**.
 
@@ -79,7 +81,9 @@
     - **Control:** Full control over the hardware and software stack.
     - **Use Case:** High-performance computing, gaming servers, financial trading systems.
 
- - ### 🚀**Virtualization**
+<br>
+
+### 🚀**Virtualization**
 
 **Virtualization is software technology that separates physical infrastructures to create multiple virtual machine (VM) or virtual environments on a single server.**
 
