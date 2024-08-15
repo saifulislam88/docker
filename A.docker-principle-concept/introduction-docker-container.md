@@ -114,6 +114,11 @@ This software technology of virtualization system is known as a virtual machine 
 🛠️**Type 1 - hypervisor** is running on **bare-metal hardware**. Such hypervisors are VMWare ESXi, Linux KVM, Hyper-V\
 🛠️**Type 2 - hypervisor** is running inside **Host OS**. Such hypervisors are VMWare Workstation are Oracle VirtualBox
 
+
+![image](https://github.com/user-attachments/assets/1b708230-709d-4053-9c49-cd9078fae885)
+
+
+
 - ####  🔥KVM Features
      - **Security**
      - **Storage**
