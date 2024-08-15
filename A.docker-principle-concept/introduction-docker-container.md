@@ -11,7 +11,7 @@
   - [Bare Metal Features](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#bare-metal-features)
 - [Virtualization](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#virtualization)
   - [Virtualization-Features](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#virtualization-features)
-- [Types of Virtualization Technologies](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#types-of-virtualization-technology)
+- [Types of Virtualization Technologies](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#types-of-virtualization-technologies)
    - [KVM Virtualization](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#virtualization)
        - [KVM Features](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#kvm-features)
    - [OS Virtualization](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#os-virtualization)
