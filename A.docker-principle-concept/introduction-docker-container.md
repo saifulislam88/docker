@@ -115,8 +115,7 @@ This software technology of virtualization system is known as a virtual machine 
 🛠️**Type 2 - hypervisor** is running inside **Host OS**. Such hypervisors are VMWare Workstation are Oracle VirtualBox
 
 
-![image](https://github.com/user-attachments/assets/1b708230-709d-4053-9c49-cd9078fae885)
-
+![image_resized_for_md](https://github.com/user-attachments/assets/bf1e5dae-6f4c-4789-8ce0-99e505726ef3)
 
 
 - ####  🔥KVM Features
