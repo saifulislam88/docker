@@ -66,9 +66,9 @@
 <img src="https://github.com/saifulislam88/docker/assets/68442870/401f1965-77cb-450a-b558-5ad80b1428ea" alt="Technological Transformation" width="800"/>
 </p>
 
-🔗**Bare Metal to Virtualization:** To improve resource utilization, flexibility, and isolation while maintaining control over the hardware.\
-🔗**Virtualization to Cloud:** To leverage scalability, cost efficiency, reduced maintenance, and global accessibility, enabling faster innovation and business agility.\
-🔗**Example:** Instead of having ten servers each running at 10% capacity, virtualization can consolidate them into one or two servers running at 80-90% capacity.
+🔗**`Bare Metal to Virtualization:`** To improve resource utilization, flexibility, and isolation while maintaining control over the hardware.\
+🔗**`Virtualization to Cloud:`** To leverage scalability, cost efficiency, reduced maintenance, and global accessibility, enabling faster innovation and business agility.\
+🔗**`Example:`** Instead of having ten servers each running at 10% capacity, virtualization can consolidate them into one or two servers running at 80-90% capacity.
 
 - ### 🚀**Bare Metal**
 
