@@ -59,7 +59,7 @@
           - [Docker Networking](#docker-networking---unlocking-the-mysteries-of-networks)
           - [Docker Volumes and Storage](#Docker-Volumes-and-Storage)
           - [Docker Compose overview](#Docker-Compose-overview)
-### 🚀Technological Transformation 
+### 🚀Technological Transformation\
 #### **Key reasons for Transition to Bare Metal -> Virtualization > Container-> Cloud**
 
 <p align="right">
