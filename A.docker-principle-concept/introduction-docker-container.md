@@ -222,6 +222,11 @@ So Docker is an open-source lightweight containerization technology. It allows y
 
 ### 🔥Container Application Deployment Steps on Docker
 
+![image](https://github.com/user-attachments/assets/3533c007-57de-41ac-8d92-42006c4f96ee)
+
+
+
+
 - [Explain Basic Docker Usage Workflow](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#explain-basic-docker-usage-workflow)
 - [Installation Steps on Ubuntu](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#installation-steps-on-ubuntu)
 - [Run Your First Container using Docker Registry](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#run-your-first-container-using-docker-registrypublic-repo-httpshubdockercom)
