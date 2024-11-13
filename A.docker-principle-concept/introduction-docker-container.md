@@ -856,7 +856,47 @@ Docker Multi-Host Networking enables containers running on various hosts to comm
 
 #### Docker Volumes and Storage
 
-docker run -d --name my_flask_app --network my_flask_network -v my_flask_volume:/app my_flask_app
+Docker volumes are persistent storage that can be used by containers to store data outside the container filesystem.
+
+`docker run -d --name my_app --network my_flask_network -v my_flask_volume:/app my_flask_app`
+
+## Types of Docker Storage:
+
+## Volumes:
+
+▶ Managed by Docker. Persist across container restarts and removals.
+▶ Stored in Docker's default location (/var/lib/docker/volumes).
+▶ Can be shared between multiple containers.
+
+
+## Bind Mounts:
+
+▶ Mount a host directory into the container.
+▶ Can be used for accessing local files on the host.
+▶ Requires absolute path on host machine.
+▶ Changes in files are reflected both on host and container.
+
+
+## tmpfs Mounts:
+
+▶ Temporary storage in memory.
+▶ Does not persist data after container stop/restart.
+▶ Useful for sensitive or ephemeral data.
+
+
+## When to Use:
+
+**Volumes:** For data that needs to persist across container restarts.
+**Bind Mounts:** When you need to access or modify files on the host system.
+**tmpfs:** For temporary or secure data storage that doesn’t need persistence.
+
+**Key Benefits of Volumes:**
+
+Easy backup, restore, and migration.
+Better performance (especially with databases).
+Isolation from container lifecycle.
+
+
 
 
 ![image](https://github.com/saifulislam88/docker/assets/68442870/0e56ca7a-8b0e-455b-8b8e-ae92660e00e4)
