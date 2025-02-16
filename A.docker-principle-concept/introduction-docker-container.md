@@ -378,6 +378,7 @@ CMD ["node", "app.js"]
 
 `docker ps -a`
 
+<!-- 
 
 ### 🚀Multi-Stage Docker Images & Containers | Application Deployment
 
@@ -932,4 +933,4 @@ sudo chmod +x /usr/local/bin/docker-compose
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 docker-compose --version
 
-
+-->
