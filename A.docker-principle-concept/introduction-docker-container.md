@@ -686,8 +686,24 @@ Create a volume at /data
 
 `VOLUME ["/data"]`
 
-##### 📌Manage Containers: Use Docker commands to manage the lifecycle of containers
-##### 📌Deploy Updates: Rebuild, retag, push updates, and restart the container to deploy updates
+##### 📌Manage Containers: Use Docker commands to manage the lifecycle of containers | Deploy Updates: Rebuild, retag, push updates, and restart the container to deploy updates
+
+docker ps -a
+docker start <container_name_or_id>
+docker stop <container_name_or_id>
+docker restart <container_name_or_id>
+docker rm <container_name_or_id>
+docker inspect <container_name_or_id>
+docker build -t <image_name>:<tag> .
+docker tag <old_image_name>:<old_tag> <new_image_name>:<new_tag>
+docker push <image_name>:<tag>
+docker pull <image_name>:<tag>
+docker rmi <image_name>:<tag>
+docker run -d --name <container_name> <image_name>:<tag>
+docker login
+docker tag <local_image_name>:<tag> username/my-app:<tag>
+docker push username/my-app:<tag>
+
 
 
 <br>
@@ -819,33 +835,6 @@ Containers in host network mode directly utilize your host's network stack, lack
 `docker ps`\
 `docker inspect <container_id_or_name> | grep IP`**
 
-**`vim docker-compose.yaml`**
-
-```sh
-services:
-  web:
-    image: nginx:latest
-    container_name: my_nginx_compose_default
-    restart: unless-stopped
-```
-
-**OR**
-
-```sh
-services:
-  web:
-    image: nginx:latest
-    container_name: my_nginx_compose_host
-    network_mode: "host"  # Use the host network
-    ports:
-      - "8080:80"  # Maps port 8080 on the host to port 80 in the container
-    restart: unless-stopped
-```
-
-`docker-compose down`\
-`docker-compose up -d`\
-`docker ps`
-
 ### 📌 None
 
 None is a docker network-type where the container is not attached to any network. As a result, the container is unable to communicate with any external network or other containers. It is isolated from every other network.
@@ -936,4 +925,32 @@ sudo chmod +x /usr/local/bin/docker-compose
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 docker-compose --version
 
--->
+### 🚀Composer-Based Docker Images & Containers | Application Deployment
+
+**`vim docker-compose.yaml`**
+
+```sh
+services:
+  web:
+    image: nginx:latest
+    container_name: my_nginx_compose_default
+    restart: unless-stopped
+```
+
+**OR**
+
+```sh
+services:
+  web:
+    image: nginx:latest
+    container_name: my_nginx_compose_host
+    network_mode: "host"  # Use the host network
+    ports:
+      - "8080:80"  # Maps port 8080 on the host to port 80 in the container
+    restart: unless-stopped
+```
+
+`docker-compose down`\
+`docker-compose up -d`\
+`docker ps`
+
