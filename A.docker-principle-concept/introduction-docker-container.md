@@ -378,7 +378,7 @@ CMD ["node", "app.js"]
 
 `docker ps -a`
 
-<!-- 
+
 
 ### 🚀Multi-Stage Docker Images & Containers | Application Deployment
 
@@ -694,6 +694,9 @@ Create a volume at /data
 <br>
 
 **-------------------------------------------------------------------------------------------------------------------------------------------------------------**
+
+<!-- 
+
 
 ### [Docker Networking - Unlocking the Mysteries of Networks]()
 
