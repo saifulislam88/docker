@@ -861,15 +861,29 @@ Docker Multi-Host Networking enables containers running on various hosts to comm
  - 3rd party network plugins
 
 
-#### Docker Volumes and Storage
+## Docker Volumes and Storage
 
 Docker volumes are persistent storage that can be used by containers to store data outside the container filesystem.
 
+### When to Use Docker Volumes?
+Volumes are designed to support the deployment of stateful Docker containers. You’ll need to use a volume when a container requires persistent storage to permanently save new and modified files.
+
+- Typical volume use cases include the following:
+
+ - Database storage
+ - Application data 
+ - Essential caches
+ - Convenient data backups
+ - Share data between containers 
+ - Write to remote filesystems 
+
+docker run -it -v demo_volume:/data ubuntu:22.04
+docker run -it -d -v /demo_volume1:/data ubuntu:22.04
 `docker run -d --name my_app --network my_flask_network -v my_flask_volume:/app my_flask_app`
 
 ## [Types of Docker Storage](https://virtualizationreview.com/articles/2022/12/22/docker4.aspx)
 
-## Volumes:
+## Named Volumes:
 
 ▶ Managed by Docker. Persist across container restarts and removals.\
 ▶ Stored in Docker's default location (/var/lib/docker/volumes).\
@@ -889,6 +903,10 @@ Docker volumes are persistent storage that can be used by containers to store da
 ▶ Temporary storage in memory.\
 ▶ Does not persist data after container stop/restart.\
 ▶ Useful for sensitive or ephemeral data.
+
+docker run -d --name nginx_tmpfs --tmpfs /var/log/nginx:rw,size=100M -p 8080:80 nginx
+
+docker run -d --name postgres_tmpfs --tmpfs /var/lib/postgresql/tmp:rw,size=200M -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=secret@123 -p 5432:5432 postgres
 
 
 ## When to Use:
