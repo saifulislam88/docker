@@ -905,13 +905,13 @@ docker run -it -d -v /demo_volume1:/data ubuntu:22.04
 
 ### 📌Example 1: Running a Nginx Server with tmpfs for Logs
 
-`docker run -d --name nginx_tmpfs --tmpfs /var/log/nginx:rw,size=100M -p 8080:80 nginx`
-`docker exec -it nginx_tmpfs df -h /var/log/nginx`
+`docker run -d --name nginx_tmpfs --tmpfs /var/log/nginx:rw,size=100M -p 8080:80 nginx`\
+`docker exec -it nginx_tmpfs df -h /var/log/nginx`\
 `docker exec -it nginx_tmpfs ls -l /var/log/nginx`
 
 ### 📌Example 2: PostgreSQL with tmpfs for Temporary Tables
-`docker run -d --name postgres_tmpfs --tmpfs /var/lib/postgresql/tmp:rw,size=200M -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=secret@123 -p 5432:5432 postgres`
-`docker exec -it postgres_tmpfs df -h /var/lib/postgresql/tmp`
+`docker run -d --name postgres_tmpfs --tmpfs /var/lib/postgresql/tmp:rw,size=200M -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=secret@123 -p 5432:5432 postgres`\
+`docker exec -it postgres_tmpfs df -h /var/lib/postgresql/tmp`\
 `docker exec -it postgres_tmpfs ls -l /var/lib/postgresql/tmp`
 
 
