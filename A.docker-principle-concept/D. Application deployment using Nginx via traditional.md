@@ -1,0 +1,2 @@
+- Traditional deployment | Native installation | System-level install | Non-containerized deployment
+- https://github.com/pravinmishraaws/Docker-Demo/blob/main/02_React_application_using_Nginx.md
