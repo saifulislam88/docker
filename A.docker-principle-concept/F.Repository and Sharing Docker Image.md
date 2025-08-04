@@ -1,6 +1,6 @@
 - https://github.com/pravinmishraaws/Docker-Demo/blob/main/04_Sharing_Docker_Image.md
 
-- #### 📌Build an Image: Use the Dockerfile to build a Docker image & Run from local Image - Multi-Stage 
+#### 📌Build an Image: Use the Dockerfile to build a Docker image & Run from local Image - Multi-Stage 
 
 `docker build -t my-node-app .`
 
