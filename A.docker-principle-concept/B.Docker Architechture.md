@@ -45,6 +45,7 @@ So Docker is an open-source lightweight containerization technology. It allows y
 **There are major components in the Docker architecture:**
 
  - Docker Daemon
+ - Docker CLI
  - Docker Clients
  - Docker Host
  - Dockerfile
