@@ -59,3 +59,14 @@ So Docker is an open-source lightweight containerization technology. It allows y
 ### 🔥Container Application Deployment Steps on Docker
 
 ![image](https://github.com/user-attachments/assets/3533c007-57de-41ac-8d92-42006c4f96ee)
+
+
+#### ✅Explain Basic Docker Usage Workflow
+
+   - **🎯1.**	Everything starts with the Dockerfile. The Dockerfile is the source code of the Image.
+
+   - **🎯2.**	Once the Dockerfile is created, you build it to create the image of the container. The image is just the "compiled version" of the "source code" which is the Dockerfile.
+
+   - **🎯3.**	Once you have the image of the container, you should redistribute it using the registry. The registry is like a git repository -- you can push and pull images.
+
+   - **🎯4.**	Next, you can use the image to run containers. A running container is very similar, in many aspects, to a virtual machine (but without the hypervisor).
