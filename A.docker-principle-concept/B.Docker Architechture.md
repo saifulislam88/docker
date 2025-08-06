@@ -44,9 +44,17 @@ So Docker is an open-source lightweight containerization technology. It allows y
 
 **There are major components in the Docker architecture:**
 
- - Docker Daemon
- - Docker CLI
- - Docker Clients
+ - Docker Daemon (Engine | Executes the container operation)
+   - `/var/run/docker.sock`
+ - Docker CLI (actual command-line tool | You type a command)
+    - `/usr/bin/docker` 
+    - `docker run` |  `docker ps` | `docker build`
+ - Docker Client | Sends REST request to Docker daemon (`docker`) via UNIX socket (`/var/run/docker.sock`)
+ - Containerd
+ - Container-shim
+ - runc
+ - Namespace
+ - CG
  - Docker Host
  - Dockerfile
 
