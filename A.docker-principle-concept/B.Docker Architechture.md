@@ -42,6 +42,7 @@ So Docker is an open-source lightweight containerization technology. It allows y
 <img src="https://github.com/saifulislam88/docker/assets/68442870/4810e275-4208-49b9-aaf2-631146eb6cbb" alt="Technological Transformation" width="600"/>
 
 
+<br> <br>
 **There are major components in the Docker architecture:**
 
  - **Docker Daemon** (Engine | Executes the container operation)
