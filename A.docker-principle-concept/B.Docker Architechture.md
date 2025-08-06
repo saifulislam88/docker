@@ -53,13 +53,16 @@ So Docker is an open-source lightweight containerization technology. It allows y
     - Sends REST request to Docker daemon (`docker`) via UNIX socket (`/var/run/docker.sock`)
  - **Containerd**
  - **Container-shim**
-    - It's a small process spawned by containerd for each container.
+    - It's a small and lightweight process spawned by containerd for each containerthat acts as a middle layer between `containerd  →  containerd-shim  →  runc → Linux kernel`
     - Its purpose is to:
       - Keep the container alive even if containerd crashes or is stopped.
       - Avoid zombie processes
       - Provide stdio/stderr pipes to runc
       - Allow containerd to be upgraded/restarted without stopping containers.
+      - `ps aux | grep containerd-shim` `sudo pkill -f containerd-shim` `sudo kill <pid>`
  - **runc**
+    - `containerd-shim` then launches `runc` to create the actual container (Linux process with `namespaces/cgroups`) communicating with `Host Kernel`. After runc finishes setup and exits, the container keeps running with `containerd-shim` as its parent process.
+    - docker → containerd → containerd-shim → runc → nginx container
  - **Namespace**
  - **CGroups**
  - **Docker Host**
