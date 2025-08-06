@@ -44,19 +44,26 @@ So Docker is an open-source lightweight containerization technology. It allows y
 
 **There are major components in the Docker architecture:**
 
- - Docker Daemon (Engine | Executes the container operation)
+ - **Docker Daemon** (Engine | Executes the container operation)
    - `/var/run/docker.sock`
- - Docker CLI (actual command-line tool | You type a command)
+ - **Docker CLI** (actual command-line tool | You type a command)
     - `/usr/bin/docker` 
     - `docker run` |  `docker ps` | `docker build`
- - Docker Client | Sends REST request to Docker daemon (`docker`) via UNIX socket (`/var/run/docker.sock`)
- - Containerd
- - Container-shim
- - runc
- - Namespace
- - CG
- - Docker Host
- - Dockerfile
+ - **Docker Client**
+    - Sends REST request to Docker daemon (`docker`) via UNIX socket (`/var/run/docker.sock`)
+ - **Containerd**
+ - **Container-shim**
+    - It's a small process spawned by containerd for each container.
+    - Its purpose is to:
+      - Keep the container alive even if containerd crashes or is stopped.
+      - Avoid zombie processes
+      - Provide stdio/stderr pipes to runc
+      - Allow containerd to be upgraded/restarted without stopping containers.
+ - **runc**
+ - **Namespace**
+ - **CGroups**
+ - **Docker Host**
+ - **Dockerfile**
 
    A **Dockerfile** is a text document that contains all the commands or instructions to bulid an image automatically by reading.
 
