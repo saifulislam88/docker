@@ -65,7 +65,9 @@ So Docker is an open-source lightweight containerization technology. It allows y
     - `containerd-shim` then launches `runc` to create the actual container (Linux process with `namespaces/cgroups`) communicating with `Host Kernel`. After runc finishes setup and exits, the container keeps running with `containerd-shim` as its parent process.
     - docker → containerd → containerd-shim → runc → Linux kernel → nginx container
  - **Namespace**
+    - https://github.com/saifulislam88/DevOps/blob/master/Must-Know-Concepts/Systems/namespace-and-cgroup.md#what-is-a-namespace 
  - **CGroups**
+    - https://github.com/saifulislam88/DevOps/blob/master/Must-Know-Concepts/Systems/namespace-and-cgroup.md#what-is-a-cgroup-control-group 
  - **Docker Host**
  - **Dockerfile**
 
