@@ -43,7 +43,7 @@ So Docker is an open-source lightweight containerization technology. It allows y
 
 
 <br> <br>
-**There are major components in the Docker architecture:**
+🔥**There are major components in the Docker architecture:**
 
  - **Docker Daemon** (Engine | Executes the container operation)
    - `/var/run/docker.sock`
