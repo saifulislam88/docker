@@ -73,6 +73,8 @@ So Docker is an open-source lightweight containerization technology. It allows y
 
    A **Dockerfile** is a text document that contains all the commands or instructions to bulid an image automatically by reading.
 
+<img width="1146" height="722" alt="{FB54CE70-FD4E-4313-9563-AD3C0E40F078}" src="https://github.com/user-attachments/assets/5b778e65-d46b-45e7-9b5c-8d41ce04e2a2" />
+
  - Docker Registry
  - Docker Images
  - Docker containers
