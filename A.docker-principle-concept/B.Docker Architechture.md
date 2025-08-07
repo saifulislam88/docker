@@ -84,6 +84,10 @@ So Docker is an open-source lightweight containerization technology. It allows y
 
 ![image](https://github.com/user-attachments/assets/3533c007-57de-41ac-8d92-42006c4f96ee)
 
+---
+
+<img width="1828" height="1010" alt="docker_registry_flow_enhanced" src="https://github.com/user-attachments/assets/b5b6fd15-b8bc-441c-bd3d-82365db03ac1" />
+
 
 #### ✅Explain Basic Docker Usage Workflow
 
