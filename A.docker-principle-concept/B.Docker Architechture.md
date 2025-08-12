@@ -99,3 +99,6 @@ So Docker is an open-source lightweight containerization technology. It allows y
    - **🎯3.**	Once you have the image of the container, you should redistribute it using the registry. The registry is like a git repository -- you can push and pull images.
 
    - **🎯4.**	Next, you can use the image to run containers. A running container is very similar, in many aspects, to a virtual machine (but without the hypervisor).
+
+
+https://media.licdn.com/dms/image/v2/D4D22AQEFrS_C9sqFDg/feedshare-shrink_800/B4DZiXMXEFGQAg-/0/1754883267161?e=1757548800&v=beta&t=EubqhNFUZyTl2i_Eb81Dq2hLIYUcDyxD4fwOJeCHclc
