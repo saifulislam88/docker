@@ -3,7 +3,7 @@
 `docker ps -a`\
 `docker start <container_name_or_id>`\
 `docker stop <container_name_or_id>`\
-docker restart <container_name_or_id>\
+`docker restart <container_name_or_id>`\
 `docker rm <container_name_or_id>`\
 `docker inspect <container_name_or_id>`\
 `docker build -t <image_name>:<tag> .`\
