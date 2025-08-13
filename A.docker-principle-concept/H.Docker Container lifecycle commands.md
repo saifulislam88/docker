@@ -1,8 +1,8 @@
 ##### 📌Manage Containers: Use Docker commands to manage the lifecycle of containers | Deploy Updates: Rebuild, retag, push updates, and restart the container to deploy updates
 
-`docker ps -a`/
-`docker start <container_name_or_id>`/
-`docker stop <container_name_or_id>`/
+`docker ps -a`\
+`docker start <container_name_or_id>`\
+`docker stop <container_name_or_id>`\
 docker restart <container_name_or_id>/
 `docker rm <container_name_or_id>`/
 `docker inspect <container_name_or_id>`/
