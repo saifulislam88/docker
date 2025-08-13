@@ -6,6 +6,7 @@ exec /usr/local/bin/python3: exec format error
 
 ```sh
 uname -m
+docker pull --platform linux/amd64 nginx
 docker pull --platform linux/arm64/v8 python:3.9
 docker inspect --format='{{.Architecture}}' python:3.9
 docker inspect --format='{{.Architecture}}' nginx
