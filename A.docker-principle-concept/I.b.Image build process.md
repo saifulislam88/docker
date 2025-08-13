@@ -7,10 +7,5 @@ Every instruction (RUN, COPY, etc.) in a Dockerfile creates:
 - Discards the temporary container
 
 
-graph TD
-    A[FROM image] --> B[Temp Container 1]
-    B --> C[RUN command]
-    C --> D[Committed Layer]
-    D --> E[Temp Container 2]
-    E --> F[COPY files]
-    F --> G[Committed Layer]
+<img width="606" height="2081" alt="deepseek_mermaid_20250813_24b833" src="https://github.com/user-attachments/assets/d13a51fa-ac3c-439b-87ea-bca8361e8783" />
+
