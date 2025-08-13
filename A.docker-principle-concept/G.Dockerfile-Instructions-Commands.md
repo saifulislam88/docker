@@ -1,14 +1,14 @@
 ##### 📌 The instructions/Command list in Dockerfile
 
-- [FROM](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#-from)
-- [WORKDIR](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#workdir)
-- [USER](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#user)
-- [MAINTAINER](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#maintainer)
-- [LABEL](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#label)
-- [COPY and ADD](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#copy-and-add)
-- [RUN | CMD | ENTRYPOINT](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#run--cmd--entrypoint)
-- [EXPOSE](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#expose)
-- [VOLUME](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#volume)
+- [FROM](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/G.Dockerfile-Instructions-Commands.md#-from)
+- [WORKDIR](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/G.Dockerfile-Instructions-Commands.md#workdir)
+- [USER](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/G.Dockerfile-Instructions-Commands.md#user)
+- [MAINTAINER](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/G.Dockerfile-Instructions-Commands.md#maintainer)
+- [LABEL](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/G.Dockerfile-Instructions-Commands.md#label)
+- [COPY and ADD](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/G.Dockerfile-Instructions-Commands.md#copy-and-add)
+- [RUN | CMD | ENTRYPOINT](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/G.Dockerfile-Instructions-Commands.md#run--cmd--entrypoint)
+- [EXPOSE](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/G.Dockerfile-Instructions-Commands.md#expose)
+- [VOLUME](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/G.Dockerfile-Instructions-Commands.md#volume)
 
  ###### ✅ **FROM**
  **Instruction creates the base image layer from base a image**.In every valid Dockerfile, FROM is the first instruction.
