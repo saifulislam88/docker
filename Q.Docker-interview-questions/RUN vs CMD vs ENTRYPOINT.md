@@ -1,6 +1,6 @@
-# 🐳 Docker RUN vs CMD vs ENTRYPOINT
+## 🐳 Docker RUN vs CMD vs ENTRYPOINT
 
-## 1️⃣ RUN
+### 1️⃣ RUN
 **Purpose:** Executes commands at image build time to install software, set up environment, or prepare the image.
 
 - Creates a new image layer each time it’s used.
@@ -26,7 +26,7 @@ RUN ["apt-get", "install", "-y", "vim"]
 
 ---
 
-## 2️⃣ CMD
+### 2️⃣ CMD
 **Purpose:** Provides default command/arguments for the container when it starts.
 
 - Only one CMD is effective — last one in Dockerfile overwrites earlier ones.
@@ -62,7 +62,7 @@ docker run myimg test.py # python test.py
 
 ---
 
-## 3️⃣ ENTRYPOINT
+### 3️⃣ ENTRYPOINT
 **Purpose:** Defines the main executable for the container — always runs unless overridden with `--entrypoint`.
 
 - Arguments passed via `docker run` are appended to ENTRYPOINT.
