@@ -10,8 +10,8 @@ https://github.com/pravinmishraaws/Docker-Demo/blob/main/04_Sharing_Docker_Image
 
 `docker tag my-node-app saifulislam88/my-node-app:latest`
   
-`docker login`
-`docker login -u saifulislam88`
+`docker login`\
+`docker login -u saifulislam88`\
 `docker info | grep Username`
 
 `docker push saifulislam88/my-node-app:latest`
