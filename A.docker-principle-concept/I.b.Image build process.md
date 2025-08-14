@@ -7,5 +7,7 @@ Every instruction (RUN, COPY, etc.) in a Dockerfile creates:
 - Discards the temporary container
 
 
-<img width="606" height="2081" alt="deepseek_mermaid_20250813_24b833" src="https://github.com/user-attachments/assets/d13a51fa-ac3c-439b-87ea-bca8361e8783" />
+`docker build -t xyz -f Dockerfile.test .`
+
+<img width="606" height="600" alt="deepseek_mermaid_20250813_24b833" src="https://github.com/user-attachments/assets/d13a51fa-ac3c-439b-87ea-bca8361e8783" />
 
