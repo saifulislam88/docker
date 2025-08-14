@@ -12,7 +12,8 @@ https://github.com/pravinmishraaws/Docker-Demo/blob/main/04_Sharing_Docker_Image
   
 `docker login`\
 `docker login -u saifulislam88`\
-`docker info | grep Username`
+`docker info | grep Username`\
+`docker logout`
 
 `docker push saifulislam88/my-node-app:latest`
 
