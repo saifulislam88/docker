@@ -9,6 +9,9 @@ Multi-stage Dockerfile is an essential feature provided by Docker that allows de
    - Improved Security
    - Simplified Build Pipeline
    - Portability and Consistency
+   - Smaller final image - Only includes the built artifacts, not build tools
+   - Better security - No build dependencies in production
+   - Clear separation of build vs runtime environment
 
 
 Here is the real example of Multi-Stage Dockerfile. We converted [Single-Stage Dockerfile](https://github.com/saifulislam88/docker/blob/main/A.docker-principle-concept/introduction-docker-container.md#write-a-dockerfile-on-nodejs-application) to Multi-Stage Dockerfile in below.
@@ -46,6 +49,35 @@ EXPOSE 3000
 CMD ["node", "app.js"]
 
 ```
+```sh
+# Use the official Node.js image as the base image
+FROM node:18-alpine AS build
+
+# Set the working directory
+WORKDIR /app
+
+# Copy package.json and install dependencies
+COPY package.json package-lock.json ./
+RUN npm install
+
+# Copy the entire project and build the app
+COPY . .
+RUN npm run build
+
+# Use Nginx to serve the React app
+FROM nginx:alpine
+COPY --from=build /app/build /usr/share/nginx/html
+
+# Expose port 80 to allow external access
+EXPOSE 80
+
+# Start Nginx
+CMD ["nginx", "-g", "daemon off;"]
+```
+
+
+
+
 -  #### 📌**How It Works**
 
    - **Build Stage**
