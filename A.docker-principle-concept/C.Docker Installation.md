@@ -1,15 +1,15 @@
-#### ✅Installation Steps on Ubuntu
-
+#### ✅Docker Installation Steps on Ubuntu | Docker Community Edition `docker-ce` 
+The full Docker Engine package installation (daemon, CLI, etc.)
 ```sh
 sudo apt update
 sudo apt install apt-transport-https ca-certificates curl software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt update
-sudo apt install docker-ce
-sudo systemctl start docker
-sudo systemctl enable docker
-sudo systemctl status docker
+sudo apt install docker-ce docker-ce-cli containerd.io
+sudo systemctl start docker containerd
+sudo systemctl enable docker containerd
+sudo systemctl status docker containerd
 ```
 #### ✅Add User to Docker Group (Optional, to Run Without sudo)
 
@@ -31,9 +31,22 @@ docker run -it -d -p 80:80 --name web-nginx nginx
 docker ps -a
 ```
 
+### What is docker.io?
+
+- This is the Docker package from the default Ubuntu/Debian APT repositories
+- Usually maintained by Debian/Ubuntu maintainers
+- Often lagging behind the official Docker versions
+- Still works, but may not have latest features or bug fixes
+- Quickly test Docker on a Debian/Ubuntu VM
 
 
+#### ✅Docker Installation Steps on Ubuntu | Ubuntu/Debian package name `docker.io` 
+The name of the Docker package from the OS repo (usually older)
 
+```bash
+# Install docker from Ubuntu repo
+sudo apt install docker.io
+```
 
 ## **Installing Docker on Windows Server 2022: A Step-by-Step Guide**
 
