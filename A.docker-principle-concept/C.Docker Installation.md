@@ -1,3 +1,13 @@
+## What is docker-ce?
+
+- Stands for: Docker Community Edition
+- Officially maintained by Docker Inc
+- Comes directly from Docker’s official repository
+- Includes:
+    - dockerd (daemon
+    - docker (CLI)
+    - containerd, runc, etc.
+
 #### ✅Docker Installation Steps on Ubuntu | Docker Community Edition `docker-ce` 
 The full Docker Engine package installation (daemon, CLI, etc.)
 ```sh
@@ -22,6 +32,7 @@ newgrp docker
 
 ```sh
 docker --version
+dpkg -l | grep docker
 docker run hello-world
 ```
 
@@ -31,6 +42,7 @@ docker run -it -d -p 80:80 --name web-nginx nginx
 docker ps -a
 ```
 
+
 ### What is docker.io?
 
 - This is the Docker package from the default Ubuntu/Debian APT repositories
@@ -38,7 +50,10 @@ docker ps -a
 - Often lagging behind the official Docker versions
 - Still works, but may not have latest features or bug fixes
 - Quickly test Docker on a Debian/Ubuntu VM
-
+- Includes:
+    - dockerd (daemon
+    - docker (CLI)
+    - containerd, runc, etc.
 
 #### ✅Docker Installation Steps on Ubuntu | Ubuntu/Debian package name `docker.io` 
 The name of the Docker package from the OS repo (usually older)
