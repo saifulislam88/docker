@@ -43,7 +43,7 @@ docker ps -a
 ```
 
 
-### What is docker.io?
+## What is docker.io?
 
 - This is the Docker package from the default Ubuntu/Debian APT repositories
 - Usually maintained by Debian/Ubuntu maintainers
