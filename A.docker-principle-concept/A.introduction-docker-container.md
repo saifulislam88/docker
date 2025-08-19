@@ -118,8 +118,12 @@ Let's revisit the different ways of deploying applications we talked about—loc
        - Containerd
        - CRI-O
        - LXC
+       - runc | Use `runc` Directly (Advanced Only)
+          - `runc` is what actually starts containers | runc run `mycontainerid`
+          - No Docker, no containerd — but very manual, Handle networking and volumes yourself, Manually create rootfs, Write your own config.json
 
 [More Details](https://www.linkedin.com/posts/mmumshad_kodekloud-devops-kubernetes-activity-7153377989160751105-viax/?utm_source=share&utm_medium=member_desktop)
+
 
 
 
