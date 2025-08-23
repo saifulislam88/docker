@@ -40,6 +40,7 @@ docker run -d --name rabbitmq-prod --hostname rabbitmq-prod -v rabbitmq-data:/va
 ```sh
 docker exec -it rabbitmq-prod rabbitmqctl list_users
 docker exec -it rabbitmq-prod rabbitmqctl list_queues
+docker cp /home/saiful/txt.log rabbitmq-prod:/var/lib/rabbitmq
 ```
 ```sh
 docker stop rabbitmq-prod 
