@@ -82,6 +82,7 @@ So Docker is an open-source lightweight containerization technology. It allows y
  - Docker Images
  - Docker containers
  - Docker Composer
+<img width="3200" height="2400" alt="image" src="https://github.com/user-attachments/assets/473fb432-24db-446b-b878-a22efd51f077" />
 
 ### 🔥Container Application Deployment Steps on Docker
 
