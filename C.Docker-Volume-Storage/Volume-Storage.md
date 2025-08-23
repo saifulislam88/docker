@@ -27,7 +27,7 @@ docker run -it -d -v /demo_volume1:/data ubuntu:22.04
 ▶ Can be shared between multiple containers.
 
 
-### RabbitMQ Managemnet
+#### RabbitMQ Managemnet
 - Use only one Volumes
 ```sh
 docker run -d --name rabbitmq-prod --hostname rabbitmq-prod -v rabbitmq_data:/var/lib/rabbitmq --restart unless-stopped -p 5672:5672 -p 15672:15672 rabbitmq:management
@@ -46,7 +46,7 @@ docker stop rabbitmq-prod
 docker rm rabbitmq-prod
 ```
 
-### MySQL | Redis | Nginx
+#### MySQL | Redis | Nginx
 
 ```sh
 docker run -d --name mysql-db -v mysql-data:/var/lib/mysql -v mysql-config:/etc/mysql -e MYSQL_ROOT_PASSWORD=secret mysql:8
