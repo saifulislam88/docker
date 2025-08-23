@@ -87,7 +87,94 @@ docker run -d --name nginx-web -v nginx-config:/etc/nginx -v nginx-html:/usr/sha
 `docker exec -it postgres_tmpfs ls -l /var/lib/postgresql/tmp`
 
 
-## When to Use:
+### 🔁 1. Node.js Web App with Secure Upload Folder
+
+**Use case**: Uploaded files are processed immediately and shouldn’t persist on disk.
+
+```bash
+docker run -d --name node-app \
+  --tmpfs /app/uploads:rw,size=64m \
+  -v app-code:/app \
+  node:18
+```
+
+✅ **Benefit**: Prevents sensitive user uploads from being written to disk.
+
+---
+
+### 🔐 2. Python App with Secrets in Memory
+
+**Use case**: Load secrets into a mounted tmpfs directory that gets cleared on reboot.
+
+```bash
+docker run -d --name secure-py \
+  --tmpfs /run/secrets:rw,size=1m \
+  -v pycode:/app \
+  python:3.11
+```
+
+✅ **Benefit**: Keeps credentials out of persistent storage and logs.
+
+---
+
+### ⚡ 3. Java Application with In-Memory Temp Storage
+
+**Use case**: Java apps often use `/tmp` for intermediate processing (sorting, zipping).
+
+```bash
+docker run -d --name java-api \
+  --tmpfs /tmp:rw,size=200m \
+  -v javacode:/app \
+  openjdk:17
+```
+
+✅ **Benefit**: High-speed access for temporary files during runtime.
+
+---
+
+### 🧪 4. CI/CD Pipeline Container (GitLab Runner)
+
+**Use case**: Mount `/build` or `/cache` directories into memory to speed up builds/tests.
+
+```bash
+docker run -d --name ci-runner \
+  --tmpfs /build:rw,size=512m \
+  -v ci-repo:/repo \
+  alpine:latest sh -c "build.sh"
+```
+
+✅ **Benefit**: Reduces disk I/O and avoids persisting intermediate builds.
+
+---
+
+### 🖥️ 5. Nginx Reverse Proxy with Memory-based Session Storage
+
+**Use case**: Cache session data or client upload buffers temporarily in RAM.
+
+```bash
+docker run -d --name nginx-secure \
+  --tmpfs /var/lib/nginx/body:rw,size=100m \
+  -v nginx-conf:/etc/nginx \
+  nginx:latest
+```
+
+✅ **Benefit**: Speeds up large uploads and avoids disk writes.
+
+---
+
+### ✅ Best Practices Recap
+
+| Use Case             | `--tmpfs` Mount Path       | Reason                                 |
+|----------------------|----------------------------|----------------------------------------|
+| User uploads         | `/app/uploads`             | Avoid storing sensitive files on disk  |
+| Secrets              | `/run/secrets`             | Prevent secrets leakage to volume      |
+| Temp file ops        | `/tmp`                     | High I/O during sort/build             |
+| Build cache          | `/build`                   | CI/CD speedup                          |
+| Session storage      | `/var/lib/nginx/body`      | Secure large client requests           
+
+
+
+### When to Use:
 
 **Volumes:** For data that needs to persist across container restarts.\
 **Bind Mounts:** When you need to access or modify files on the host system.\
