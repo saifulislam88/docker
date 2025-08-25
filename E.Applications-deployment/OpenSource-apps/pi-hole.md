@@ -5,7 +5,16 @@ https://github.com/pi-hole/docker-pi-hole
 
 - Disable Ubuntu Internal DNS (systemd-resolved)
   
-```bash vim /etc/systemd/resolved.conf ```
+**Ubuntu (especially 18.04+, 20.04+, 22.04)** uses systemd-resolved to handle local DNS resolution and often binds to port 53 — which conflicts with services like Pi-hole.
+Here’s a clean way to fully stop internal DNS (systemd-resolved), free up port 53, and configure 8.8.8.8 / 1.1.1.1 for DNS queries.
+
+```bash
+sudo lsof -i :53
+sudo netstat -tulpn | grep :53
+sudo fuser -v 53/tcp
+
+```
+```bash vim /etc/systemd/resolved.conf ```\
 `DNSStubListener=no`
 
 ```bash
@@ -37,6 +46,12 @@ services:
 
     restart: unless-stopped
 ```
+
+```bash
+docker-compose up -d
+docker-compose down
+```
+
 
 - Manually reset password from inside container
 
