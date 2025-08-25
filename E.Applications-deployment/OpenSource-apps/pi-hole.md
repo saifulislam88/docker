@@ -49,9 +49,10 @@ services:
 
 ```bash
 docker-compose up -d
-docker-compose down
 ```
-
+- DNS Settings
+http://172.30.0.234:8001/admin/
+<img width="2502" height="1236" alt="image" src="https://github.com/user-attachments/assets/3e427761-3e17-42be-a3f8-4d5f034512bf" />
 
 - Manually reset password from inside container
 
@@ -59,9 +60,6 @@ docker-compose down
 docker exec -it pihole bash
 pihole -a -p
 ```
-- DNS Settings
-http://172.30.0.234:8001/admin/
-<img width="2502" height="1236" alt="image" src="https://github.com/user-attachments/assets/3e427761-3e17-42be-a3f8-4d5f034512bf" />
 
 
 ```bash
