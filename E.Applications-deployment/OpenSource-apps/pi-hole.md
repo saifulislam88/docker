@@ -14,7 +14,7 @@ sudo netstat -tulpn | grep :53
 sudo fuser -v 53/tcp
 
 ```
-```bash vim /etc/systemd/resolved.conf ```\
+`vim /etc/systemd/resolved.conf\
 `DNSStubListener=no`
 
 ```bash
