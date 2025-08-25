@@ -1,8 +1,7 @@
 ### Pi-hole Installation via docker-compose
 
-```bash 
 https://github.com/pi-hole/docker-pi-hole
-```
+
 
 - Disable Ubuntu Internal DNS (systemd-resolved)
   
