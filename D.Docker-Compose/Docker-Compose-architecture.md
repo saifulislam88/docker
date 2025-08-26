@@ -42,3 +42,15 @@ services:
 `docker-compose up -d`\
 `docker ps`
 
+
+### ✅ Concepts to Cover
+1. **What is Docker Compose?** (multi-service orchestration)\
+2. **Services vs Containers**\
+3. **Networking — service name resolution**\
+4. **Volumes — data persistence**\
+5. **Environment Variables — configuring services**\
+6. **Port Mapping — host vs container ports**\
+7. **Build Context — frontend/backend separation**\
+8. **depends_on — service dependency startup**\
+9. **Separation of networks — frontend/backend isolation**
+
