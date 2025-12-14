@@ -8,11 +8,13 @@ sudo apt-get install -y docker.io
 
 2. Download the Latest Docker Compose
 
+```sh
 sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
 docker-compose --version
 
+```
 ### 🚀Composer-Based Docker Images & Containers | Application Deployment
 
 **`vim docker-compose.yaml`**
