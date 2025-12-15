@@ -1,3 +1,6 @@
+Q. When an application is run inside a Docker container using a bind mount or Docker volume, does Docker duplicate the data and require extra disk space, or is the host disk used directly by the container?
+
+
 I have an existing MinIO server running on a Linux machine that already stores **3 TB of objects** on disk. Now I want to migrate this MinIO setup to **Docker (containerized MinIO)** on a new VM.
 
 My confusion is:
