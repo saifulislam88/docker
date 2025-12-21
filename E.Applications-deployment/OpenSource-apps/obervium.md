@@ -46,9 +46,11 @@ volumes:
 networks:
   observium_network:
 ```
-
+```sh
 docker-compose exec observium bash
 docker exec -it observium bash
-./adduser.php admin mySecurePass123 10 
-./passwd.php admin newStrongerPass456
+
+```
+```./adduser.php admin mySecurePass123 10 ```
+```./passwd.php admin newStrongerPass456```
 
