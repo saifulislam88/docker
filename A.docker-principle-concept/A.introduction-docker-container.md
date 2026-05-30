@@ -75,17 +75,21 @@ This software technology of virtualization system is known as a virtual machine 
 
 🛠️ **Type 1 - Hypervisor (Bare-Metal):** Runs directly on the host machine's physical hardware without an underlying host operating system. It offers enterprise-grade performance and efficiency.
 *   **Linux KVM:** Built directly into the Linux Kernel, turning Linux into a Type-1 hypervisor.
+*   **ProXmoX:** Built directly into the Linux Kernel, turning Linux into a Type-1 hypervisor. KVM এবং LXC ভিত্তিক অত্যন্ত জনপ্রিয় ওপেন-সোর্স এন্টারপ্রাইজ প্ল্যাটফর্ম।
 *   **VMware ESXi:** Enterprise bare-metal hypervisor managed via vSphere.
 *   **Microsoft Hyper-V:** Microsoft's native hypervisor architecture for Windows Server.
 *   **Xen Project / XCP-ng:** Highly secure open-source bare-metal microkernel hypervisor.
 *   **Nutanix AHV:** Acropolis Hypervisor built for hyperconverged infrastructure.
+*   **SmartOS:** ইলুমোস (Illumos/Solaris) ভিত্তিক একটি বিশেষ হাইপারভাইজার যা কন্টেইনার এবং KVM দুটোই সাপোর্ট করে।
 
 🛠️ **Type 2 - Hypervisor (Hosted):** Runs as a software application inside a standard Host Operating System (like Windows, macOS, or Linux). Ideal for local testing and developer environments.
 *   **VMware Workstation Pro / Player:** Premium desktop virtualization for Windows and Linux.
 *   **Oracle VirtualBox:** Free and open-source cross-platform virtualizer.
 *   **VMware Fusion:** Desktop virtualization specifically built for macOS users.
 *   **Parallels Desktop:** Ultra-fast desktop virtualization for running Windows on Apple Silicon Macs.
-*   **QEMU:** A powerful open-source machine emulator and virtualizer.
+*   **QEMU:** A powerful open-source machine emulator and virtualizer. এটি মূলত একটি শক্তিশালী ওপেন-সোর্স ইমুলেটর, তবে লিনাক্সে KVM-এর সাথে যুক্ত হয়ে এটি হার্ডওয়্যার ভার্চুয়ালাইজেশন হিসেবে কাজ করে।
+*   **UTM:** Apple Silicon Mac-এর জন্য
+*   **VMware Fusion:** ম্যাক (macOS) ব্যবহারকারীদের জন্য তৈরি করা ভার্চুয়ালাইজেশন সফটওয়্যার।
 
 ---
 
